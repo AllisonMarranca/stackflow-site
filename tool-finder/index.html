@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI Tool Finder Quiz — StackFlow</title>
+<meta name="description" content="Answer 5 quick questions and get a personalized AI starter stack for your business — the right tools for your goals, team, and budget. Free, 60 seconds." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/css/main.css" />
+<link rel="icon" href="/favicon.ico" sizes="48x48" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="canonical" href="https://trystackflow.com/tool-finder/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="StackFlow" />
+<meta property="og:title" content="AI Tool Finder Quiz — StackFlow" />
+<meta property="og:description" content="5 questions. 60 seconds. A personalized AI starter stack for your business." />
+<meta property="og:url" content="https://trystackflow.com/tool-finder/" />
+<meta property="og:image" content="https://trystackflow.com/assets/og-image.png" />
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="/"><span class="logo-mark"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="10" y="20" width="65" height="14" rx="3" fill="#00BFB3"/><rect x="22" y="43" width="65" height="14" rx="3" fill="#2DD4BF"/><rect x="34" y="66" width="65" height="14" rx="3" fill="#00BFB3"/></svg></span>Stack<span>Flow</span></a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/ai-growth-blueprint/">AI Growth Blueprint</a>
+      <a href="/ai-visibility-score/">AI Visibility Score</a>
+      <a href="/ai-tools/" class="active">AI Tools</a>
+      <a href="/automation-library/">Automation Library</a>
+      <a href="/resources/">Resources</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a class="btn btn-primary btn-sm nav-cta" href="/ai-growth-blueprint/">Get Started</a>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">AI Tool Finder</p>
+    <h1>Find your AI starter stack in 60 seconds.</h1>
+    <p class="sub">Answer 5 quick questions and get a personalized set of tools matched to your goals, team, and budget — with an honest reason for each pick.</p>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section class="section" style="padding-top:48px">
+  <div class="wrap">
+    <div class="quiz" id="quiz">
+
+      <div class="quiz-progress" aria-hidden="true"><div class="quiz-bar" id="quizBar"></div></div>
+      <p class="quiz-count muted" id="quizCount">Question 1 of 5</p>
+
+      <!-- Q1 -->
+      <div class="quiz-step" data-step="0">
+        <h2 class="h" style="font-size:26px">What's your biggest priority right now?</h2>
+        <div class="quiz-opts">
+          <button class="quiz-opt" data-q="priority" data-v="leads"><b>Get more leads</b><span>Fill the pipeline and book more calls</span></button>
+          <button class="quiz-opt" data-q="priority" data-v="content"><b>Save time on content</b><span>Blogs, social posts, video — faster</span></button>
+          <button class="quiz-opt" data-q="priority" data-v="search"><b>Show up in search &amp; AI</b><span>Google, ChatGPT, AI Overviews</span></button>
+          <button class="quiz-opt" data-q="priority" data-v="automate"><b>Automate operations</b><span>Kill the repetitive busywork</span></button>
+          <button class="quiz-opt" data-q="priority" data-v="followup"><b>Better customer follow-up</b><span>Respond faster, never drop a lead</span></button>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="quiz-step" data-step="1" hidden>
+        <h2 class="h" style="font-size:26px">What kind of business do you run?</h2>
+        <div class="quiz-opts">
+          <button class="quiz-opt" data-q="biz" data-v="local"><b>Local / service business</b><span>Trades, health, real estate, restaurants</span></button>
+          <button class="quiz-opt" data-q="biz" data-v="ecom"><b>E-commerce</b><span>Online store or marketplace seller</span></button>
+          <button class="quiz-opt" data-q="biz" data-v="agency"><b>Agency / consultant</b><span>Client services, marketing, freelance</span></button>
+          <button class="quiz-opt" data-q="biz" data-v="creator"><b>Creator / coach</b><span>Content, courses, community</span></button>
+          <button class="quiz-opt" data-q="biz" data-v="other"><b>Something else</b><span>Every business fits somewhere</span></button>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="quiz-step" data-step="2" hidden>
+        <h2 class="h" style="font-size:26px">How big is your team?</h2>
+        <div class="quiz-opts">
+          <button class="quiz-opt" data-q="team" data-v="solo"><b>Just me</b><span>Solo operator</span></button>
+          <button class="quiz-opt" data-q="team" data-v="small"><b>2–5 people</b><span>Small and scrappy</span></button>
+          <button class="quiz-opt" data-q="team" data-v="mid"><b>6–20 people</b><span>Growing team</span></button>
+          <button class="quiz-opt" data-q="team" data-v="large"><b>20+ people</b><span>Established business</span></button>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="quiz-step" data-step="3" hidden>
+        <h2 class="h" style="font-size:26px">How comfortable are you with new software?</h2>
+        <div class="quiz-opts">
+          <button class="quiz-opt" data-q="comfort" data-v="beginner"><b>Keep it simple</b><span>I want tools that just work</span></button>
+          <button class="quiz-opt" data-q="comfort" data-v="comfortable"><b>Comfortable</b><span>I can learn most tools with a tutorial</span></button>
+          <button class="quiz-opt" data-q="comfort" data-v="power"><b>Power user</b><span>Give me the flexible, connectable stuff</span></button>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="quiz-step" data-step="4" hidden>
+        <h2 class="h" style="font-size:26px">Monthly budget for new tools?</h2>
+        <div class="quiz-opts">
+          <button class="quiz-opt" data-q="budget" data-v="low"><b>Under $50/mo</b><span>Free plans and low-cost picks first</span></button>
+          <button class="quiz-opt" data-q="budget" data-v="mid"><b>$50–150/mo</b><span>Room for one or two workhorses</span></button>
+          <button class="quiz-opt" data-q="budget" data-v="high"><b>$150–500/mo</b><span>Ready to invest in growth</span></button>
+          <button class="quiz-opt" data-q="budget" data-v="max"><b>$500+/mo</b><span>Best-in-class, whatever it takes</span></button>
+        </div>
+      </div>
+
+      <div class="quiz-nav">
+        <button class="btn btn-secondary btn-sm" id="quizBack" hidden>← Back</button>
+      </div>
+
+      <!-- RESULTS -->
+      <div class="quiz-results" id="quizResults" hidden>
+        <p class="eyebrow">Your starter stack</p>
+        <h2 class="h">Here's where we'd start.</h2>
+        <p class="lead" id="resultsIntro" style="margin-bottom:8px"></p>
+        <p class="muted" id="resultsBudgetNote" style="font-size:14px;margin:0 0 28px"></p>
+        <div class="grid grid-3" id="resultsGrid"></div>
+
+        <div class="quiz-capture">
+          <div>
+            <h3 class="h" style="font-size:22px">Want this as a setup plan?</h3>
+            <p class="muted" style="margin:0;font-size:15px">We'll email your stack with a step-by-step setup order — plus one practical AI workflow a week.</p>
+          </div>
+          <form data-demo data-done="Sent — check your inbox.">
+            <div class="capture-inline">
+              <input type="email" placeholder="you@business.com" required aria-label="Email address" />
+              <button class="btn btn-primary" type="submit">Email My Stack</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="cta-row" style="margin-top:28px">
+          <a class="btn btn-secondary" href="/ai-growth-blueprint/">Get the full AI Growth Blueprint →</a>
+          <button class="btn btn-ghost" id="quizRestart">Retake the quiz</button>
+        </div>
+        <p class="muted" style="font-size:12px;margin-top:22px">Some links are affiliate links — we may earn a commission at no extra cost to you. Recommendations are based on your answers, never on commission rates.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="logo"><span class="logo-mark"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="10" y="20" width="65" height="14" rx="3" fill="#00BFB3"/><rect x="22" y="43" width="65" height="14" rx="3" fill="#2DD4BF"/><rect x="34" y="66" width="65" height="14" rx="3" fill="#00BFB3"/></svg></span>Stack<span>Flow</span></div>
+        <p>The AI Growth Platform for Small Businesses. Confidently adopt AI, choose the right tools, improve marketing, automate work, and grow.</p>
+      <p class="msh-tag">In partnership with <a href="https://www.mainstreethost.com" target="_blank" rel="noopener">Mainstreethost</a></p>
+      </div>
+      <div class="foot-col">
+        <h5>Platform</h5>
+        <a href="/ai-growth-blueprint/">AI Growth Blueprint</a>
+        <a href="/ai-visibility-score/">AI Visibility Score</a>
+        <a href="/ai-tools/">AI Tools</a>
+        <a href="/tool-finder/">Tool Finder Quiz</a>
+        <a href="/automation-library/">Automation Library</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="/about/">About</a>
+        <a href="/resources/">Resources</a>
+        <a href="/contact/">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h5>Popular Tools</h5>
+        <a href="/ai-tools/#crm">CRM &amp; Automation</a>
+        <a href="/ai-tools/#writing">AI Writing</a>
+        <a href="/ai-tools/#seo">SEO Tools</a>
+        <a href="/ai-tools/#video">Video &amp; Voice</a>
+      </div>
+    </div>
+    <p class="disclosure">Affiliate disclosure: StackFlow may earn a commission when you purchase through some links on this site, at no additional cost to you. We only recommend tools we believe genuinely help small businesses. Examples of outcomes are illustrative and not guarantees — results vary by business.</p>
+    <div class="foot-legal">
+      <span>© 2026 StackFlow. Build a smarter business with AI.</span>
+      <span><a href="/privacy/">Privacy</a> · <a href="/affiliate-disclosure/">Affiliate Disclosure</a> · <a href="/contact/">Contact</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script>
+(function () {
+  // ---------- Tool catalog (same links + tracking as /ai-tools/) ----------
+  var TOOLS = {
+    ghl:        { name: "GoHighLevel", cat: "CRM & All-in-One", url: "https://www.gohighlevel.com/pro-trial?fp_ref=t9gncf", rel: "sponsored noopener", cta: "ghl", price: "From $97/mo · Free trial", desc: "CRM, email, SMS, calendars, and funnels in one platform — replaces several subscriptions." },
+    jasper:     { name: "Jasper", cat: "AI Writing", url: "#", rel: "sponsored noopener", cta: "jasper", price: "From $39/mo · Free trial", desc: "On-brand marketing copy at volume — ads, emails, landing pages, and social." },
+    surfer:     { name: "Surfer SEO", cat: "SEO", url: "#", rel: "sponsored noopener", cta: "surfer", price: "From $89/mo", desc: "Scores your content against top-ranking pages so your posts actually rank." },
+    pictory:    { name: "Pictory", cat: "Short-Form Video", url: "#", rel: "sponsored noopener", cta: "pictory", price: "From $19/mo · Free trial", desc: "Turns posts and scripts into social-ready short videos automatically." },
+    eleven:     { name: "ElevenLabs", cat: "AI Voiceover", url: "#", rel: "sponsored noopener", cta: "elevenlabs", price: "From $5/mo · Free plan", desc: "Natural AI voiceovers in seconds — no recording, no camera." },
+    make:       { name: "Make.com", cat: "Automation", url: "#", rel: "sponsored noopener", cta: "make", price: "From $10.59/mo · Free plan", desc: "Visual automations that connect your apps and run workflows hands-off." },
+    tidio:      { name: "Tidio", cat: "Customer Support", url: "https://www.tidio.com", rel: "noopener", cta: "tidio", price: "Free plan available", desc: "AI chat that answers routine customer questions around the clock." },
+    mailerlite: { name: "MailerLite", cat: "Email Marketing", url: "https://www.mailerlite.com", rel: "noopener", cta: "mailerlite", price: "Free plan available", desc: "Approachable email marketing with automation and AI writing help." },
+    canva:      { name: "Canva", cat: "Design", url: "https://www.canva.com", rel: "noopener", cta: "canva", price: "Free plan available", desc: "On-brand graphics for social, ads, and print in minutes." },
+    fathom:     { name: "Fathom", cat: "Meeting Notes", url: "https://fathom.video", rel: "noopener", cta: "fathom", price: "Free plan available", desc: "Records and summarizes every call, with action items ready to share." },
+    plausible:  { name: "Plausible", cat: "Analytics", url: "https://plausible.io", rel: "noopener", cta: "plausible", price: "Free trial", desc: "Simple, privacy-friendly analytics that answer “is it working?”" }
+  };
+  var FREE_FRIENDLY = ["tidio", "mailerlite", "canva", "eleven", "make", "fathom"];
+
+  // ---------- Scoring rules ----------
+  var RULES = {
+    priority: {
+      leads:    { ghl: 5, mailerlite: 2, tidio: 2 },
+      content:  { jasper: 5, pictory: 4, canva: 2, eleven: 2 },
+      search:   { surfer: 5, jasper: 3, plausible: 2 },
+      automate: { make: 5, fathom: 2, ghl: 2 },
+      followup: { ghl: 4, tidio: 3, mailerlite: 3 }
+    },
+    biz: {
+      local:   { ghl: 2, tidio: 1, canva: 1 },
+      ecom:    { tidio: 2, mailerlite: 2, canva: 1 },
+      agency:  { ghl: 3, surfer: 1, make: 1 },
+      creator: { pictory: 2, eleven: 2, canva: 1, mailerlite: 1 },
+      other:   { plausible: 1, make: 1 }
+    },
+    team: {
+      solo:  { canva: 1, mailerlite: 1 },
+      small: { fathom: 1, make: 1 },
+      mid:   { fathom: 2, make: 1 },
+      large: { make: 2, fathom: 2 }
+    },
+    comfort: {
+      beginner:    { canva: 1, mailerlite: 1, tidio: 1, make: -2, ghl: -1 },
+      comfortable: {},
+      power:       { make: 2, ghl: 1 }
+    },
+    budget: {
+      low:  { ghl: -4, surfer: -3, jasper: -1 },
+      mid:  {},
+      high: { ghl: 1, surfer: 1 },
+      max:  { ghl: 2, surfer: 1, jasper: 1 }
+    }
+  };
+  var LABELS = {
+    priority: { leads: "more leads", content: "faster content", search: "search & AI visibility", automate: "automation", followup: "customer follow-up" },
+    biz: { local: "local business", ecom: "e-commerce", agency: "agency", creator: "creator", other: "small business" },
+    budget: { low: "under $50/mo", mid: "$50–150/mo", high: "$150–500/mo", max: "$500+/mo" }
+  };
+
+  // ---------- Quiz state machine ----------
+  var answers = {};
+  var step = 0;
+  var STEPS = 5;
+  var steps = document.querySelectorAll(".quiz-step");
+  var bar = document.getElementById("quizBar");
+  var count = document.getElementById("quizCount");
+  var back = document.getElementById("quizBack");
+  var results = document.getElementById("quizResults");
+
+  function show(n) {
+    step = n;
+    steps.forEach(function (el, i) { el.hidden = i !== n; });
+    results.hidden = true;
+    count.hidden = false;
+    count.textContent = "Question " + (n + 1) + " of " + STEPS;
+    bar.style.width = ((n) / STEPS * 100) + "%";
+    back.hidden = n === 0;
+    // restore selected state
+    steps[n].querySelectorAll(".quiz-opt").forEach(function (b) {
+      b.classList.toggle("selected", answers[b.dataset.q] === b.dataset.v);
+    });
+  }
+
+  function finish() {
+    steps.forEach(function (el) { el.hidden = true; });
+    back.hidden = true;
+    count.hidden = true;
+    bar.style.width = "100%";
+    renderResults();
+    results.hidden = false;
+    results.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function scoreTools() {
+    var scores = {};
+    Object.keys(TOOLS).forEach(function (k) { scores[k] = 0; });
+    Object.keys(answers).forEach(function (q) {
+      var w = (RULES[q] || {})[answers[q]] || {};
+      Object.keys(w).forEach(function (k) { scores[k] += w[k]; });
+    });
+    if (answers.budget === "low") {
+      FREE_FRIENDLY.forEach(function (k) { scores[k] += 1; });
+    }
+    return Object.keys(scores).sort(function (a, b) { return scores[b] - scores[a]; }).slice(0, 3);
+  }
+
+  function renderResults() {
+    var picks = scoreTools();
+    var grid = document.getElementById("resultsGrid");
+    grid.innerHTML = "";
+    picks.forEach(function (k, i) {
+      var t = TOOLS[k];
+      var card = document.createElement("div");
+      card.className = "tool quiz-pick";
+      card.innerHTML =
+        '<span class="pill">' + (i === 0 ? "★ Primary pick — " : "") + t.cat + "</span>" +
+        "<h3>" + t.name + "</h3>" +
+        '<p class="why" style="font-size:14.5px;color:var(--muted)">' + t.desc + "</p>" +
+        '<div class="price"><span>' + t.price + "</span></div>";
+      var a = document.createElement("a");
+      a.className = "btn btn-primary";
+      a.href = t.url;
+      a.target = "_blank";
+      a.rel = t.rel;
+      a.setAttribute("data-cta", t.cta);
+      a.textContent = "Try " + t.name + " →";
+      a.addEventListener("click", function () { console.log("CTA click:", t.cta, new Date().toISOString()); });
+      card.appendChild(a);
+      grid.appendChild(card);
+    });
+    document.getElementById("resultsIntro").textContent =
+      "Based on your answers — " + LABELS.priority[answers.priority] + ", " +
+      LABELS.biz[answers.biz] + ", " + LABELS.budget[answers.budget] +
+      " — these three tools cover the most ground with the least overlap.";
+    document.getElementById("resultsBudgetNote").textContent =
+      answers.budget === "low" ? "We prioritized tools with free plans to fit your budget — upgrade only when a tool earns it." : "";
+  }
+
+  document.querySelectorAll(".quiz-opt").forEach(function (b) {
+    b.addEventListener("click", function () {
+      answers[b.dataset.q] = b.dataset.v;
+      if (step < STEPS - 1) { show(step + 1); } else { finish(); }
+    });
+  });
+  back.addEventListener("click", function () { show(Math.max(0, step - 1)); });
+  document.getElementById("quizRestart").addEventListener("click", function () {
+    answers = {}; show(0);
+    document.getElementById("quiz").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  show(0);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 100" width="430" height="100" role="img" aria-label="StackFlow">
+<title>StackFlow</title>
+<rect x="6" y="22" width="60" height="13" rx="3" fill="#00BFB3"/>
+<rect x="17" y="43" width="60" height="13" rx="3" fill="#2DD4BF"/>
+<rect x="28" y="64" width="60" height="13" rx="3" fill="#00BFB3"/>
+<text x="112" y="64" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-size="50" font-weight="800" letter-spacing="-1"><tspan fill="#0B1120">Stack</tspan><tspan fill="#00BFB3">Flow</tspan></text>
+</svg>

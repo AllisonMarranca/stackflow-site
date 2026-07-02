@@ -1,0 +1,9 @@
+# StackFlow robots.txt
+# Allow all reputable crawlers, including AI answer engines. Adjust if you want to
+# exclude specific bots.
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://trystackflow.com/sitemap.xml

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="StackFlow">
+<title>StackFlow</title>
+<rect x="0" y="0" width="100" height="100" rx="22" fill="#00BFB3"/>
+<path d="M52 32 Q32 32 32 42 Q32 50 44 52 Q52 54 52 62 Q52 72 32 72" stroke="#FFFFFF" stroke-width="6" fill="none" stroke-linecap="round"/>
+<path d="M60 32 L76 32 M60 32 L60 72 M60 50 L72 50" stroke="#FFFFFF" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg>
