@@ -17,7 +17,7 @@ jobs:
           mkdir dist
           rsync -a ./ dist/ \
             --exclude '.git' --exclude '.github' --exclude '.gitignore' \
-            --exclude '_snippets' --exclude 'README.md' --exclude 'dist'
+            --exclude '_snippets' --exclude 'README.md' --exclude 'dist' --exclude 'worker-standalone' --exclude 'functions'
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3

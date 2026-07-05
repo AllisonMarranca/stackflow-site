@@ -106,24 +106,53 @@
       </div>
 
       <div class="form-card" id="check-score">
-        <h3 class="h" style="font-size:22px">Check your AI Visibility Score</h3>
-        <p class="muted" style="font-size:14px;margin:0 0 20px">Enter your website and we'll send your score report.</p>
-        <form data-demo data-done="Thanks — your score report is on the way.">
+        <h3 class="h" style="font-size:22px">Run your free check</h3>
+        <p class="muted" style="font-size:14px;margin:0 0 20px">Enter your website — we scan the signals AI engines rely on. About 10 seconds, no email required.</p>
+        <form id="vsForm">
           <div class="field">
-            <label for="site">Website</label>
-            <input id="site" type="url" placeholder="https://yourbusiness.com" required />
+            <label for="vs-site">Your website</label>
+            <input id="vs-site" type="text" placeholder="yourbusiness.com" required />
           </div>
-          <div class="field">
-            <label for="bizname">Business name</label>
-            <input id="bizname" type="text" placeholder="Your Business, LLC" />
-          </div>
-          <div class="field">
-            <label for="email">Where should we send it?</label>
-            <input id="email" type="email" placeholder="you@business.com" required />
-          </div>
-          <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Get My Score</button>
-          <p class="form-note">This is a preview form. Connect it to your scanning workflow or CRM to start collecting requests.</p>
+          <button class="btn btn-primary" type="submit" id="vsBtn" style="width:100%;justify-content:center">Check My Site →</button>
+          <p class="form-note">Free · Instant · No email required to see your score</p>
         </form>
+        <div id="vsProgress" hidden>
+          <div class="vs-steps">
+            <div class="vs-step">Reading robots.txt &amp; AI crawler access…</div>
+            <div class="vs-step">Looking for business schema…</div>
+            <div class="vs-step">Checking llms.txt &amp; sitemap…</div>
+            <div class="vs-step">Scoring content signals…</div>
+          </div>
+        </div>
+        <p id="vsError" class="muted" style="font-size:14px;margin-top:14px" hidden></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- LIVE RESULTS -->
+<section class="section" id="vsResults" hidden>
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Your results</p>
+      <h2 class="h" id="vsGrade"></h2>
+      <p class="lead" id="vsSummary"></p>
+    </div>
+    <div class="vs-results-grid">
+      <div class="vs-gauge-card">
+        <div class="gauge" id="vsGauge"><span id="vsScoreNum">0</span></div>
+        <div class="muted" style="font-size:13px">out of 100</div>
+        <div class="muted" style="font-size:12px" id="vsDomainLabel"></div>
+      </div>
+      <div class="vs-checks" id="vsChecks"></div>
+    </div>
+    <div class="cta-band" style="margin-top:44px">
+      <h2>Want these fixed — fast?</h2>
+      <p>Book a free 15-minute results review. We'll walk through your report together and pinpoint the three fixes that move your score most.</p>
+      <div class="cta-row center">
+        <a class="btn btn-primary" id="vsBookBtn" href="/contact/">Book My Free Results Review</a>
+        <a class="btn btn-secondary" href="/ai-growth-blueprint/">Get the Full Blueprint</a>
       </div>
     </div>
   </div>
@@ -211,5 +240,89 @@
 </footer>
 
 <script src="/assets/js/main.js"></script>
+<script>
+(function () {
+  // Set this to your booking link (Calendly, GHL calendar, etc.).
+  // Until set, the button falls back to the contact page.
+  var BOOKING_URL = "";
+
+  var form = document.getElementById("vsForm");
+  if (!form) return;
+  var btn = document.getElementById("vsBtn");
+  var prog = document.getElementById("vsProgress");
+  var errEl = document.getElementById("vsError");
+  var results = document.getElementById("vsResults");
+  if (BOOKING_URL) document.getElementById("vsBookBtn").href = BOOKING_URL;
+
+  var stepTimer = null;
+  function startSteps() {
+    var steps = prog.querySelectorAll(".vs-step");
+    steps.forEach(function (s) { s.classList.remove("on"); });
+    var i = 0; steps[0].classList.add("on");
+    stepTimer = setInterval(function () {
+      if (i < steps.length - 1) { i++; steps[i].classList.add("on"); }
+    }, 1500);
+  }
+  function stopSteps() { clearInterval(stepTimer); prog.hidden = true; btn.disabled = false; btn.textContent = "Check My Site →"; }
+
+  function esc(t) { var d = document.createElement("div"); d.textContent = t == null ? "" : String(t); return d.innerHTML; }
+
+  function render(data) {
+    document.getElementById("vsGrade").textContent = data.grade;
+    document.getElementById("vsSummary").textContent = data.summary;
+    document.getElementById("vsDomainLabel").textContent = data.domain;
+    var target = Math.max(0, Math.min(100, data.score));
+    var gauge = document.getElementById("vsGauge");
+    var num = document.getElementById("vsScoreNum");
+    var cur = 0;
+    var anim = setInterval(function () {
+      cur = Math.min(target, cur + Math.max(1, Math.round(target / 30)));
+      num.textContent = cur;
+      var col = target >= 80 ? "var(--green)" : target >= 60 ? "var(--accent)" : target >= 40 ? "var(--warn)" : "#F87171";
+      gauge.style.background = "conic-gradient(" + col + " " + cur + "%, #1E293B 0)";
+      if (cur >= target) clearInterval(anim);
+    }, 24);
+    var list = document.getElementById("vsChecks");
+    list.innerHTML = "";
+    (data.checks || []).forEach(function (c) {
+      var row = document.createElement("div");
+      row.className = "vs-check";
+      row.innerHTML =
+        '<span class="vs-dot ' + c.status + '"></span>' +
+        '<div style="flex:1"><div style="display:flex;gap:10px;align-items:baseline"><b>' + esc(c.label) + "</b>" +
+        '<span class="pts">' + c.points + "/" + c.max + "</span></div>" +
+        "<p>" + esc(c.detail) + "</p>" +
+        (c.fix ? '<p class="fix">Fix: ' + esc(c.fix) + "</p>" : "") +
+        "</div>";
+      list.appendChild(row);
+    });
+    results.hidden = false;
+    results.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var domain = document.getElementById("vs-site").value.trim();
+    errEl.hidden = true; results.hidden = true;
+    prog.hidden = false; btn.disabled = true; btn.textContent = "Checking…";
+    startSteps();
+    fetch("/api/check?domain=" + encodeURIComponent(domain))
+      .then(function (res) {
+        return res.json().then(function (data) { return { ok: res.ok, data: data }; });
+      })
+      .then(function (r) {
+        stopSteps();
+        if (!r.ok) { errEl.textContent = r.data.error || "Something went wrong — try again."; errEl.hidden = false; return; }
+        render(r.data);
+      })
+      .catch(function () {
+        stopSteps();
+        errEl.innerHTML = "The live checker is warming up on this deployment. Want your score anyway? " +
+          '<a href="/contact/">Send us your website</a> and we’ll run your report by hand — free.';
+        errEl.hidden = false;
+      });
+  });
+})();
+</script>
 </body>
 </html>
