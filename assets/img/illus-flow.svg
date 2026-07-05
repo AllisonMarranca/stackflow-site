@@ -1,70 +1,81 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 540" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" role="img" aria-label="From assessment to automation — how StackFlow works">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 560" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" role="img" aria-label="The StackFlow path: check your AI Visibility Score, follow your blueprint, then automations run for you">
 <defs>
   <linearGradient id="fg" x1="0" y1="0" x2="1" y2="1">
     <stop offset="0" stop-color="#00BFB3"/><stop offset="1" stop-color="#2DD4BF"/>
   </linearGradient>
+  <radialGradient id="glow" cx=".5" cy=".45" r=".65">
+    <stop offset="0" stop-color="#00BFB3" stop-opacity=".16"/><stop offset="1" stop-color="#00BFB3" stop-opacity="0"/>
+  </radialGradient>
 </defs>
 
-<!-- connector spine -->
-<path d="M110 96 C 40 170, 40 210, 130 262 C 220 310, 340 320, 350 420" fill="none" stroke="#1E293B" stroke-width="2" stroke-dasharray="6 7"/>
-<circle cx="110" cy="96" r="4" fill="#00BFB3"/>
-<circle cx="130" cy="262" r="4" fill="#2DD4BF"/>
-<circle cx="350" cy="420" r="4" fill="#00BFB3"/>
+<rect width="460" height="560" fill="url(#glow)"/>
 
-<!-- card 1: assessment / score -->
-<g transform="translate(96,36)">
-  <rect width="270" height="120" rx="14" fill="#0F172A" stroke="#243449"/>
-  <rect x="18" y="18" width="84" height="9" rx="4.5" fill="#94A3B8" opacity=".55"/>
-  <g transform="translate(48,74)">
-    <circle r="30" fill="none" stroke="#1E293B" stroke-width="8"/>
-    <circle r="30" fill="none" stroke="url(#fg)" stroke-width="8" stroke-linecap="round" stroke-dasharray="147 188.5" transform="rotate(-90)"/>
-    <text y="6" text-anchor="middle" fill="#FFFFFF" font-size="17" font-weight="800">78</text>
+<!-- connector spine with numbered stops -->
+<path d="M78 118 C 40 190, 60 210, 96 246 M78 388 C 50 340, 46 300, 78 268" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round" opacity=".7"/>
+<g font-size="13" font-weight="800" text-anchor="middle">
+  <circle cx="78" cy="96" r="15" fill="url(#fg)"/><text x="78" y="101" fill="#00151f">1</text>
+  <circle cx="86" cy="258" r="15" fill="url(#fg)"/><text x="86" y="263" fill="#00151f">2</text>
+  <circle cx="78" cy="410" r="15" fill="url(#fg)"/><text x="78" y="415" fill="#00151f">3</text>
+</g>
+
+<!-- CARD 1 — AI Visibility Score -->
+<g transform="translate(108,28)">
+  <rect width="330" height="136" rx="14" fill="#131E33" stroke="#2A4358"/>
+  <text x="22" y="34" fill="#FFFFFF" font-size="14" font-weight="800">AI Visibility Score</text>
+  <g transform="translate(52,86)">
+    <circle r="32" fill="none" stroke="#1E293B" stroke-width="8"/>
+    <circle r="32" fill="none" stroke="url(#fg)" stroke-width="8" stroke-linecap="round" stroke-dasharray="157 201" transform="rotate(-90)"/>
+    <text y="6" text-anchor="middle" fill="#FFFFFF" font-size="19" font-weight="800">78</text>
   </g>
-  <g fill="#1E293B">
-    <rect x="100" y="52" width="140" height="8" rx="4" fill="#00BFB3" opacity=".85"/>
-    <rect x="100" y="72" width="112" height="8" rx="4"/>
-    <rect x="100" y="92" width="126" height="8" rx="4"/>
+  <g font-size="12" font-family="Lato, 'Segoe UI', Arial, sans-serif">
+    <path d="M110 62 l5 5 8-10" stroke="#26D07C" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="134" y="71" fill="#C7D2E0">Found by ChatGPT</text>
+    <path d="M110 88 l5 5 8-10" stroke="#26D07C" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="134" y="97" fill="#C7D2E0">Reviews look strong</text>
+    <circle cx="117" cy="112" r="6" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    <text x="134" y="117" fill="#94A3B8">2 gaps to fix</text>
   </g>
 </g>
 
-<!-- card 2: plan / blueprint -->
-<g transform="translate(30,212)">
-  <rect width="270" height="130" rx="14" fill="#0F172A" stroke="#243449"/>
-  <rect x="18" y="18" width="110" height="9" rx="4.5" fill="#94A3B8" opacity=".55"/>
-  <g transform="translate(18,44)">
-    <rect width="234" height="20" rx="6" fill="#111827" stroke="#1E293B"/>
-    <path d="M10 10 l4 4 7-8" stroke="#26D07C" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="30" y="6" width="130" height="7" rx="3.5" fill="#1E293B"/>
-  </g>
-  <g transform="translate(18,72)">
-    <rect width="234" height="20" rx="6" fill="#111827" stroke="#1E293B"/>
-    <path d="M10 10 l4 4 7-8" stroke="#26D07C" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    <rect x="30" y="6" width="102" height="7" rx="3.5" fill="#1E293B"/>
-  </g>
-  <g transform="translate(18,100)">
-    <rect width="234" height="20" rx="6" fill="#111827" stroke="#1E293B"/>
-    <circle cx="14" cy="10" r="5" fill="none" stroke="#00BFB3" stroke-width="2"/>
-    <rect x="30" y="6" width="148" height="7" rx="3.5" fill="#1E293B"/>
+<!-- CARD 2 — Growth Blueprint -->
+<g transform="translate(120,192)">
+  <rect width="330" height="140" rx="14" fill="#131E33" stroke="#2A4358"/>
+  <text x="22" y="34" fill="#FFFFFF" font-size="14" font-weight="800">Your Growth Blueprint</text>
+  <g font-size="12" font-family="Lato, 'Segoe UI', Arial, sans-serif">
+    <rect x="22" y="48" width="286" height="24" rx="7" fill="#0B1120" stroke="#1E293B"/>
+    <path d="M34 60 l5 5 8-10" stroke="#26D07C" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="56" y="64" fill="#C7D2E0">Pick your starter stack</text>
+    <rect x="22" y="78" width="286" height="24" rx="7" fill="#0B1120" stroke="#1E293B"/>
+    <path d="M34 90 l5 5 8-10" stroke="#26D07C" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="56" y="94" fill="#C7D2E0">Set up review requests</text>
+    <rect x="22" y="108" width="286" height="24" rx="7" fill="#0B1120" stroke="#00BFB3"/>
+    <circle cx="39" cy="120" r="6" fill="none" stroke="#00BFB3" stroke-width="2"/>
+    <text x="56" y="124" fill="#FFFFFF">Automate lead follow-up</text>
+    <text x="296" y="124" fill="#00BFB3" text-anchor="end" font-weight="700">→</text>
   </g>
 </g>
 
-<!-- card 3: automation nodes -->
-<g transform="translate(170,384)">
-  <rect width="270" height="120" rx="14" fill="#0F172A" stroke="#243449"/>
-  <rect x="18" y="18" width="96" height="9" rx="4.5" fill="#94A3B8" opacity=".55"/>
-  <!-- three connected nodes -->
-  <g transform="translate(0,48)">
-    <path d="M62 28 H118 M158 28 H214" stroke="#00BFB3" stroke-width="2"/>
-    <path d="M112 24 l8 4 -8 4z" fill="#00BFB3"/>
-    <path d="M208 24 l8 4 -8 4z" fill="#00BFB3"/>
-    <rect x="26" y="10" width="36" height="36" rx="9" fill="#111827" stroke="#2DD4BF"/>
-    <rect x="36" y="22" width="16" height="4" rx="2" fill="#2DD4BF"/>
-    <rect x="36" y="30" width="12" height="4" rx="2" fill="#2DD4BF" opacity=".6"/>
-    <rect x="122" y="10" width="36" height="36" rx="18" fill="#111827" stroke="#00BFB3"/>
-    <circle cx="140" cy="28" r="7" fill="none" stroke="#00BFB3" stroke-width="2"/>
-    <circle cx="140" cy="28" r="2" fill="#00BFB3"/>
-    <rect x="218" y="10" width="36" height="36" rx="9" fill="url(#fg)"/>
-    <path d="M228 34 l6-8 5 4 7-10" stroke="#00151f" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- CARD 3 — Automations running -->
+<g transform="translate(108,360)">
+  <rect width="330" height="150" rx="14" fill="#131E33" stroke="#2A4358"/>
+  <text x="22" y="34" fill="#FFFFFF" font-size="14" font-weight="800">Automations</text>
+  <rect x="234" y="18" width="76" height="24" rx="12" fill="#0B1120" stroke="#26D07C"/>
+  <circle cx="250" cy="30" r="4" fill="#26D07C"/>
+  <text x="260" y="34" fill="#26D07C" font-size="11" font-weight="700">Live</text>
+  <!-- node flow -->
+  <g transform="translate(22,56)">
+    <rect width="64" height="44" rx="10" fill="#0B1120" stroke="#2DD4BF"/>
+    <text x="32" y="20" text-anchor="middle" fill="#2DD4BF" font-size="10" font-weight="700">NEW LEAD</text>
+    <rect x="14" y="27" width="36" height="5" rx="2.5" fill="#1E293B"/>
+    <path d="M70 22 H104" stroke="#00BFB3" stroke-width="2"/><path d="M100 18 l8 4 -8 4z" fill="#00BFB3"/>
+    <rect x="110" y="0" width="64" height="44" rx="10" fill="#0B1120" stroke="#2DD4BF"/>
+    <text x="142" y="20" text-anchor="middle" fill="#2DD4BF" font-size="10" font-weight="700">BOOK CALL</text>
+    <rect x="124" y="27" width="36" height="5" rx="2.5" fill="#1E293B"/>
+    <path d="M180 22 H214" stroke="#00BFB3" stroke-width="2"/><path d="M210 18 l8 4 -8 4z" fill="#00BFB3"/>
+    <rect x="220" y="0" width="64" height="44" rx="10" fill="url(#fg)"/>
+    <text x="252" y="20" text-anchor="middle" fill="#00151f" font-size="10" font-weight="800">FOLLOW UP</text>
+    <path d="M238 32 l6 5 12-12" stroke="#00151f" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
+  <text x="22" y="132" fill="#94A3B8" font-size="12" font-family="Lato, 'Segoe UI', Arial, sans-serif">Runs while you work — <tspan fill="#2DD4BF" font-weight="700">14.5 hrs saved this week</tspan></text>
 </g>
 </svg>
