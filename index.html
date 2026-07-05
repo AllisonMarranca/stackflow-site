@@ -101,12 +101,16 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
     <nav class="nav-links">
-      <a href="/" class="active">Home</a>
-      <a href="/ai-growth-blueprint/">AI Growth Blueprint</a>
-      <a href="/ai-visibility-score/">AI Visibility Score</a>
+      <div class="nav-drop">
+        <button class="nav-drop-btn" aria-haspopup="true" aria-expanded="false">Platform <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="nav-drop-menu">
+          <a href="/ai-growth-blueprint/">AI Growth Blueprint</a>
+          <a href="/ai-visibility-score/">AI Visibility Score</a>
+          <a href="/tool-finder/">Tool Finder Quiz</a>
+          <a href="/automation-library/">Automation Library</a>
+        </div>
+      </div>
       <a href="/ai-tools/">AI Tools</a>
-      <a href="/tool-finder/">Tool Finder Quiz</a>
-      <a href="/automation-library/">Automation Library</a>
       <a href="/resources/">Resources</a>
       <a href="/about/">About</a>
       <a href="/contact/">Contact</a>
@@ -117,15 +121,20 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="wrap">
-    <div class="badge"><span class="dot"></span> The AI Growth Platform for Small Businesses</div>
-    <h1>Build a Smarter Business with <em>AI</em>.</h1>
-    <p class="sub">Discover the right AI tools, receive personalized marketing strategies, automate repetitive work, and grow your business with confidence.</p>
-    <div class="cta-row center">
-      <a class="btn btn-primary" href="/ai-growth-blueprint/">Get Your AI Growth Blueprint</a>
-      <a class="btn btn-secondary" href="/ai-tools/">Explore AI Tools</a>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="badge"><span class="dot"></span> The AI Growth Platform for Small Businesses</div>
+      <h1>Build a Smarter Business with <em>AI</em>.</h1>
+      <p class="sub">Discover the right AI tools, receive personalized marketing strategies, automate repetitive work, and grow your business with confidence.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/ai-growth-blueprint/">Get Your AI Growth Blueprint</a>
+        <a class="btn btn-secondary" href="/ai-tools/">Explore AI Tools</a>
+      </div>
+      <div class="micro">Free to start · No credit card · Built for owners, not engineers</div>
     </div>
-    <div class="micro">Free to start · No credit card · Built for owners, not engineers</div>
+    <div class="hero-visual">
+      <img src="/assets/img/hero-dashboard.svg" alt="StackFlow dashboard preview showing an AI Visibility Score of 78, weekly reach chart, and running automations" width="900" height="620" />
+    </div>
   </div>
 </section>
 
@@ -284,7 +293,11 @@
       <h2 class="h">From "where do I start?" to a running system.</h2>
       <p class="lead">A simple path you can follow at your own pace — no technical background required.</p>
     </div>
-    <div class="steps">
+    <div class="how-split">
+      <div class="how-illus">
+        <img src="/assets/img/illus-flow.svg" alt="Illustration of the StackFlow path: assess your AI Visibility Score, follow your blueprint checklist, then launch automations" width="460" height="540" />
+      </div>
+      <div class="steps">
       <div class="step">
         <div class="num">STEP 01</div>
         <h4>Assess</h4>
@@ -304,6 +317,7 @@
         <div class="num">STEP 04</div>
         <h4>Automate & grow</h4>
         <p>Deploy ready-made workflows from the Automation Library and put repetitive work on autopilot.</p>
+      </div>
       </div>
     </div>
   </div>

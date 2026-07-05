@@ -1,0 +1,27 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Publish to stackflow-landing
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Stage site (exclude repo-only files)
+        run: |
+          mkdir dist
+          rsync -a ./ dist/ \
+            --exclude '.git' --exclude '.github' --exclude '.gitignore' \
+            --exclude '_snippets' --exclude 'README.md' --exclude 'dist'
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=stackflow-landing

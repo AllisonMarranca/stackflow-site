@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" role="img" aria-label="StackFlow dashboard preview">
+<defs>
+  <linearGradient id="tg" x1="0" y1="1" x2="0" y2="0">
+    <stop offset="0" stop-color="#00BFB3"/><stop offset="1" stop-color="#2DD4BF"/>
+  </linearGradient>
+  <clipPath id="win"><rect x="20" y="20" width="860" height="580" rx="18"/></clipPath>
+</defs>
+
+<!-- window -->
+<rect x="20" y="20" width="860" height="580" rx="18" fill="#0F172A" stroke="#243449"/>
+<g clip-path="url(#win)">
+  <!-- title bar -->
+  <rect x="20" y="20" width="860" height="52" fill="#111827"/>
+  <circle cx="52" cy="46" r="6" fill="#F87171"/><circle cx="74" cy="46" r="6" fill="#FBBF24"/><circle cx="96" cy="46" r="6" fill="#26D07C"/>
+  <rect x="330" y="33" width="240" height="26" rx="13" fill="#0B1120" stroke="#1E293B"/>
+  <text x="450" y="51" text-anchor="middle" fill="#64748B" font-size="13">trystackflow.com</text>
+
+  <!-- sidebar -->
+  <rect x="20" y="72" width="200" height="528" fill="#0d1526"/>
+  <g transform="translate(44,100)">
+    <rect x="0" y="2" width="17" height="4.5" rx="1.5" fill="#00BFB3"/>
+    <rect x="3.5" y="9.5" width="17" height="4.5" rx="1.5" fill="#2DD4BF"/>
+    <rect x="7" y="17" width="17" height="4.5" rx="1.5" fill="#00BFB3"/>
+    <text x="34" y="17" fill="#FFFFFF" font-size="17" font-weight="800">Stack<tspan fill="#00BFB3">Flow</tspan></text>
+  </g>
+  <g fill="#1E293B">
+    <rect x="44" y="160" width="120" height="10" rx="5" fill="#00BFB3" opacity=".9"/>
+    <rect x="44" y="192" width="100" height="10" rx="5"/>
+    <rect x="44" y="224" width="112" height="10" rx="5"/>
+    <rect x="44" y="256" width="88" height="10" rx="5"/>
+    <rect x="44" y="288" width="106" height="10" rx="5"/>
+  </g>
+
+  <!-- header row -->
+  <text x="252" y="112" fill="#FFFFFF" font-size="20" font-weight="800">Growth Dashboard</text>
+  <text x="252" y="134" fill="#64748B" font-size="12">Your AI stack at a glance</text>
+
+  <!-- stat cards -->
+  <g>
+    <rect x="252" y="152" width="188" height="74" rx="12" fill="#111827" stroke="#1E293B"/>
+    <text x="270" y="180" fill="#94A3B8" font-size="11">Hours saved / week</text>
+    <text x="270" y="208" fill="#FFFFFF" font-size="22" font-weight="800">14.5</text>
+    <rect x="404" y="196" width="22" height="12" rx="6" fill="#26D07C" opacity=".2"/>
+  </g>
+  <g>
+    <rect x="452" y="152" width="188" height="74" rx="12" fill="#111827" stroke="#1E293B"/>
+    <text x="470" y="180" fill="#94A3B8" font-size="11">New leads</text>
+    <text x="470" y="208" fill="#FFFFFF" font-size="22" font-weight="800">38</text>
+  </g>
+  <g>
+    <rect x="652" y="152" width="188" height="74" rx="12" fill="#111827" stroke="#1E293B"/>
+    <text x="670" y="180" fill="#94A3B8" font-size="11">Automations running</text>
+    <text x="670" y="208" fill="#FFFFFF" font-size="22" font-weight="800">6</text>
+    <circle cx="816" cy="200" r="5" fill="#26D07C"/>
+  </g>
+
+  <!-- AI Visibility Score card w/ gauge -->
+  <rect x="252" y="248" width="280" height="200" rx="14" fill="#111827" stroke="#1E293B"/>
+  <text x="276" y="282" fill="#FFFFFF" font-size="14" font-weight="700">AI Visibility Score</text>
+  <!-- gauge: r=62, circumference ~389.6; 78% = 304 -->
+  <g transform="translate(392,368)">
+    <circle r="62" fill="none" stroke="#1E293B" stroke-width="13"/>
+    <circle r="62" fill="none" stroke="url(#tg)" stroke-width="13" stroke-linecap="round"
+      stroke-dasharray="304 389.6" transform="rotate(-90)"/>
+    <text y="8" text-anchor="middle" fill="#FFFFFF" font-size="34" font-weight="800">78</text>
+    <text y="30" text-anchor="middle" fill="#64748B" font-size="10">of 100</text>
+  </g>
+
+  <!-- traffic bar chart card -->
+  <rect x="556" y="248" width="284" height="200" rx="14" fill="#111827" stroke="#1E293B"/>
+  <text x="580" y="282" fill="#FFFFFF" font-size="14" font-weight="700">Weekly reach</text>
+  <g>
+    <rect x="586" y="380" width="24" height="44" rx="4" fill="#00BFB3" opacity=".35"/>
+    <rect x="620" y="366" width="24" height="58" rx="4" fill="#00BFB3" opacity=".45"/>
+    <rect x="654" y="348" width="24" height="76" rx="4" fill="#00BFB3" opacity=".6"/>
+    <rect x="688" y="356" width="24" height="68" rx="4" fill="#00BFB3" opacity=".5"/>
+    <rect x="722" y="330" width="24" height="94" rx="4" fill="#00BFB3" opacity=".8"/>
+    <rect x="756" y="310" width="24" height="114" rx="4" fill="url(#tg)"/>
+    <rect x="790" y="292" width="24" height="132" rx="4" fill="url(#tg)"/>
+  </g>
+
+  <!-- automations list -->
+  <rect x="252" y="470" width="588" height="110" rx="14" fill="#111827" stroke="#1E293B"/>
+  <text x="276" y="500" fill="#FFFFFF" font-size="14" font-weight="700">Active automations</text>
+  <g font-size="12" fill="#94A3B8">
+    <circle cx="286" cy="526" r="4" fill="#26D07C"/><text x="300" y="530">New lead follow-up</text>
+    <rect x="520" y="518" width="34" height="16" rx="8" fill="#00BFB3"/><circle cx="546" cy="526" r="6" fill="#FFFFFF"/>
+    <circle cx="286" cy="554" r="4" fill="#26D07C"/><text x="300" y="558">Blog-to-video repurposing</text>
+    <rect x="520" y="546" width="34" height="16" rx="8" fill="#00BFB3"/><circle cx="546" cy="554" r="6" fill="#FFFFFF"/>
+    <circle cx="620" cy="526" r="4" fill="#26D07C"/><text x="634" y="530">Review requests</text>
+    <rect x="790" y="518" width="34" height="16" rx="8" fill="#00BFB3"/><circle cx="816" cy="526" r="6" fill="#FFFFFF"/>
+    <circle cx="620" cy="554" r="4" fill="#26D07C"/><text x="634" y="558">Weekly report</text>
+    <rect x="790" y="546" width="34" height="16" rx="8" fill="#1E293B"/><circle cx="798" cy="554" r="6" fill="#64748B"/>
+  </g>
+</g>
+</svg>

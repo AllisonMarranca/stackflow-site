@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 540" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" role="img" aria-label="From assessment to automation — how StackFlow works">
+<defs>
+  <linearGradient id="fg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#00BFB3"/><stop offset="1" stop-color="#2DD4BF"/>
+  </linearGradient>
+</defs>
+
+<!-- connector spine -->
+<path d="M110 96 C 40 170, 40 210, 130 262 C 220 310, 340 320, 350 420" fill="none" stroke="#1E293B" stroke-width="2" stroke-dasharray="6 7"/>
+<circle cx="110" cy="96" r="4" fill="#00BFB3"/>
+<circle cx="130" cy="262" r="4" fill="#2DD4BF"/>
+<circle cx="350" cy="420" r="4" fill="#00BFB3"/>
+
+<!-- card 1: assessment / score -->
+<g transform="translate(96,36)">
+  <rect width="270" height="120" rx="14" fill="#0F172A" stroke="#243449"/>
+  <rect x="18" y="18" width="84" height="9" rx="4.5" fill="#94A3B8" opacity=".55"/>
+  <g transform="translate(48,74)">
+    <circle r="30" fill="none" stroke="#1E293B" stroke-width="8"/>
+    <circle r="30" fill="none" stroke="url(#fg)" stroke-width="8" stroke-linecap="round" stroke-dasharray="147 188.5" transform="rotate(-90)"/>
+    <text y="6" text-anchor="middle" fill="#FFFFFF" font-size="17" font-weight="800">78</text>
+  </g>
+  <g fill="#1E293B">
+    <rect x="100" y="52" width="140" height="8" rx="4" fill="#00BFB3" opacity=".85"/>
+    <rect x="100" y="72" width="112" height="8" rx="4"/>
+    <rect x="100" y="92" width="126" height="8" rx="4"/>
+  </g>
+</g>
+
+<!-- card 2: plan / blueprint -->
+<g transform="translate(30,212)">
+  <rect width="270" height="130" rx="14" fill="#0F172A" stroke="#243449"/>
+  <rect x="18" y="18" width="110" height="9" rx="4.5" fill="#94A3B8" opacity=".55"/>
+  <g transform="translate(18,44)">
+    <rect width="234" height="20" rx="6" fill="#111827" stroke="#1E293B"/>
+    <path d="M10 10 l4 4 7-8" stroke="#26D07C" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="30" y="6" width="130" height="7" rx="3.5" fill="#1E293B"/>
+  </g>
+  <g transform="translate(18,72)">
+    <rect width="234" height="20" rx="6" fill="#111827" stroke="#1E293B"/>
+    <path d="M10 10 l4 4 7-8" stroke="#26D07C" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="30" y="6" width="102" height="7" rx="3.5" fill="#1E293B"/>
+  </g>
+  <g transform="translate(18,100)">
+    <rect width="234" height="20" rx="6" fill="#111827" stroke="#1E293B"/>
+    <circle cx="14" cy="10" r="5" fill="none" stroke="#00BFB3" stroke-width="2"/>
+    <rect x="30" y="6" width="148" height="7" rx="3.5" fill="#1E293B"/>
+  </g>
+</g>
+
+<!-- card 3: automation nodes -->
+<g transform="translate(170,384)">
+  <rect width="270" height="120" rx="14" fill="#0F172A" stroke="#243449"/>
+  <rect x="18" y="18" width="96" height="9" rx="4.5" fill="#94A3B8" opacity=".55"/>
+  <!-- three connected nodes -->
+  <g transform="translate(0,48)">
+    <path d="M62 28 H118 M158 28 H214" stroke="#00BFB3" stroke-width="2"/>
+    <path d="M112 24 l8 4 -8 4z" fill="#00BFB3"/>
+    <path d="M208 24 l8 4 -8 4z" fill="#00BFB3"/>
+    <rect x="26" y="10" width="36" height="36" rx="9" fill="#111827" stroke="#2DD4BF"/>
+    <rect x="36" y="22" width="16" height="4" rx="2" fill="#2DD4BF"/>
+    <rect x="36" y="30" width="12" height="4" rx="2" fill="#2DD4BF" opacity=".6"/>
+    <rect x="122" y="10" width="36" height="36" rx="18" fill="#111827" stroke="#00BFB3"/>
+    <circle cx="140" cy="28" r="7" fill="none" stroke="#00BFB3" stroke-width="2"/>
+    <circle cx="140" cy="28" r="2" fill="#00BFB3"/>
+    <rect x="218" y="10" width="36" height="36" rx="9" fill="url(#fg)"/>
+    <path d="M228 34 l6-8 5 4 7-10" stroke="#00151f" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</g>
+</svg>
