@@ -1,9 +1,9 @@
 # StackFlow
 
-> StackFlow is the AI Growth Platform for Small Businesses. It helps owners confidently
-> adopt AI: discover the right tools, get a personalized marketing strategy (the AI Growth
-> Blueprint), measure readiness for AI search (the AI Visibility Score), and automate
-> repetitive work with ready-to-use workflows.
+> StackFlow is the AI Visibility Platform. It helps businesses understand and improve how
+> often they appear in AI search engines (ChatGPT, Google AI Overviews, Gemini, Claude,
+> Perplexity) via a free AI Visibility Score, then fix the gaps with a personalized
+> blueprint, recommended tools, and expert implementation through Mainstreethost.
 
 StackFlow is designed for non-technical small business owners, local businesses, agencies,
 and marketers who want to grow using AI without the overwhelm. Tool recommendations are
