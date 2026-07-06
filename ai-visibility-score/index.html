@@ -244,7 +244,7 @@
 (function () {
   // Set this to your booking link (Calendly, GHL calendar, etc.).
   // Until set, the button falls back to the contact page.
-  var BOOKING_URL = "";
+  var BOOKING_URL = "https://calendly.com/getstackflow/ai-visibility-results-review";
 
   var form = document.getElementById("vsForm");
   if (!form) return;
@@ -252,7 +252,10 @@
   var prog = document.getElementById("vsProgress");
   var errEl = document.getElementById("vsError");
   var results = document.getElementById("vsResults");
-  if (BOOKING_URL) document.getElementById("vsBookBtn").href = BOOKING_URL;
+  if (BOOKING_URL) {
+    var bb = document.getElementById("vsBookBtn");
+    bb.href = BOOKING_URL; bb.target = "_blank"; bb.rel = "noopener";
+  }
 
   var stepTimer = null;
   function startSteps() {
