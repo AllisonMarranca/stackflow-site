@@ -16,7 +16,8 @@ independent and organized by business need, not by commission rate.
 - [AI Tools](https://trystackflow.com/ai-tools/): Curated AI tool recommendations organized by business need — writing, SEO, automation, video, meetings, customer support, analytics, CRM, design, and email.
 - [AI Tool Finder Quiz](https://trystackflow.com/tool-finder/): A 60-second quiz that recommends a personalized AI starter stack based on business goals, team size, and budget.
 - [Automation Library](https://trystackflow.com/automation-library/): Ready-to-use AI workflows and automations for small businesses.
-- [Resources](https://trystackflow.com/resources/): Guides, playbooks, and comparisons on adopting AI and growing a small business.
+- [AI Visibility Prompt Library](https://trystackflow.com/prompts/): Free copy-paste prompts to test and improve how AI engines see a business.
+- [Guides](https://trystackflow.com/resources/): Guides, playbooks, and comparisons on adopting AI and growing a small business.
 - [About](https://trystackflow.com/about/): StackFlow's mission and approach.
 - [Contact](https://trystackflow.com/contact/): How to reach StackFlow.
 

@@ -431,3 +431,12 @@ h1,h2,h3,h4,h5,h6,.logo,.h,.btn,.eyebrow{font-family:'Montserrat',system-ui,-app
   background:linear-gradient(180deg,rgba(0,191,179,.07),transparent);border:1px solid var(--accent);
   border-radius:16px;padding:26px 30px}
 @media (max-width:820px){.pro-upsell{grid-template-columns:1fr}}
+
+/* ---------- prompt library ---------- */
+.prompt-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-bottom:16px}
+.prompt-head{display:flex;flex-direction:column;gap:2px;margin-bottom:12px}
+.prompt-head b{color:#fff;font-size:16px;font-family:'Montserrat',system-ui,sans-serif}
+.prompt-head span{color:var(--muted);font-size:13.5px}
+.prompt-card pre{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:16px 18px;
+  color:var(--text);font-size:13.5px;line-height:1.6;white-space:pre-wrap;word-break:break-word;
+  font-family:ui-monospace,'Cascadia Code',Consolas,monospace;margin:0 0 12px}
