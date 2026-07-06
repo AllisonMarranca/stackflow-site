@@ -48,3 +48,19 @@
     });
   });
 })();
+
+
+/* First-touch source capture (UTM + referrer) for lead attribution */
+(function () {
+  try {
+    if (localStorage.getItem("sf_src")) return;
+    var p = new URLSearchParams(location.search);
+    var src = { landing: location.pathname, first: new Date().toISOString() };
+    ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"].forEach(function (k) {
+      var v = p.get(k); if (v) src[k] = v.slice(0, 120);
+    });
+    var ref = document.referrer || "";
+    if (ref && ref.indexOf(location.hostname) === -1) src.referrer = ref.slice(0, 200);
+    localStorage.setItem("sf_src", JSON.stringify(src));
+  } catch (e) {}
+})();

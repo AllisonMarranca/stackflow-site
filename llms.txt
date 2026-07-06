@@ -11,7 +11,7 @@ independent and organized by business need, not by commission rate.
 
 ## Core pages
 - [Home](https://trystackflow.com/): Overview of the platform and how it helps small businesses grow with AI.
-- [AI Growth Blueprint](https://trystackflow.com/ai-growth-blueprint/): A personalized AI marketing strategy generated for your specific business.
+- [Pro Visibility Report](https://trystackflow.com/pro-report/): Paid deep report — competitor comparison, live AI-recommendation testing, multi-page scan, and a 30-day fix plan.
 - [AI Visibility Score](https://trystackflow.com/ai-visibility-score/): Measures how prepared your business is to be found and recommended by ChatGPT, Google AI Overviews, Gemini, Claude, and Perplexity.
 - [AI Tools](https://trystackflow.com/ai-tools/): Curated AI tool recommendations organized by business need — writing, SEO, automation, video, meetings, customer support, analytics, CRM, design, and email.
 - [AI Tool Finder Quiz](https://trystackflow.com/tool-finder/): A 60-second quiz that recommends a personalized AI starter stack based on business goals, team size, and budget.

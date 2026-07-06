@@ -29,6 +29,7 @@ export async function onRequestPost(context) {
   const email = String(body.email || "").trim().slice(0, 200);
   const domain = normalizeDomain(body.domain);
   const newsletter = body.newsletter === true;
+  const source = (body.source && typeof body.source === "object") ? body.source : {};
 
   if (!name) return json({ error: "Please tell us your first name." }, 400);
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return json({ error: "Please enter a valid email address." }, 400);
@@ -58,9 +59,20 @@ export async function onRequestPost(context) {
       from: FROM_REPORTS,
       to: [LEAD_INBOX],
       subject: "New checker lead: " + name + " — " + result.domain + " (" + result.score + "/100)" + (newsletter ? " [newsletter opt-in]" : ""),
-      html: leadHtml(name, email, newsletter, result),
+      html: leadHtml(name, email, newsletter, result, source),
     });
   } catch (e) { /* lead copy failed; report already delivered */ }
+
+  // 3) Optional lead log (create a KV namespace bound as LEADS on the Pages
+  //    project to activate; silently skipped otherwise)
+  try {
+    if (env.LEADS) {
+      await env.LEADS.put(
+        "lead:" + Date.now() + ":" + email,
+        JSON.stringify({ name: name, email: email, domain: result.domain, score: result.score, newsletter: newsletter, source: source, at: new Date().toISOString() })
+      );
+    }
+  } catch (e) { /* logging is best-effort */ }
 
   return json({ ok: true });
 }
@@ -133,7 +145,10 @@ function reportHtml(name, r) {
   '</div></body></html>';
 }
 
-function leadHtml(name, email, newsletter, r) {
+function leadHtml(name, email, newsletter, r, source) {
+  const srcPairs = Object.keys(source || {}).map(function (k) {
+    return esc(k) + ": " + esc(String(source[k]).slice(0, 200));
+  }).join("<br>") || "direct / unknown";
   const fails = (r.checks || []).filter(function (c) { return c.status !== "pass"; })
     .map(function (c) { return esc(c.label); }).join(", ") || "none";
   return '<div style="font-family:Arial,sans-serif;font-size:14px;line-height:1.7">' +
@@ -144,6 +159,7 @@ function leadHtml(name, email, newsletter, r) {
     "<b>Score:</b> " + r.score + "/100 (" + esc(r.grade) + ")<br>" +
     "<b>Gaps:</b> " + fails + "<br>" +
     "<b>Newsletter opt-in:</b> " + (newsletter ? "YES — add to tips list" : "no") + "</p>" +
+    "<p><b>Lead source:</b><br>" + srcPairs + "</p>" +
     '<p>Full report was emailed to the lead. <a href="https://trystackflow.com/api/check?domain=' + encodeURIComponent(r.domain) + '">Re-run their check</a>.</p>' +
     "</div>";
 }

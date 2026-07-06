@@ -49,7 +49,7 @@
     </div>
     <div class="cta-row center" style="margin-top:30px">
       <a class="btn btn-primary" href="#check-score">Check Your Score</a>
-      <a class="btn btn-secondary" href="/ai-growth-blueprint/">Get Your Blueprint</a>
+      <a class="btn btn-secondary" href="/pro-report/">Get Your Blueprint</a>
     </div>
   </div>
 </section>
@@ -95,7 +95,7 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>The specific gaps holding you back — and what to fix first.</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Recommended tools and next steps to improve your score.</span></li>
         </ul>
-        <p class="muted" style="margin-top:22px">Turn your results into action with the <a href="/ai-growth-blueprint/">AI Growth Blueprint</a> and <a href="/resources/">Resource Hub</a>.</p>
+        <p class="muted" style="margin-top:22px">Turn your results into action with the <a href="/pro-report/">Pro Visibility Report</a> and <a href="/resources/">Resource Hub</a>.</p>
       </div>
 
       <div class="form-card" id="check-score">
@@ -170,12 +170,24 @@
       </div>
     </div>
 
+    <div class="pro-upsell">
+      <div>
+        <p class="eyebrow" style="margin-bottom:8px">Go deeper</p>
+        <h3 class="h" style="font-size:22px">Pro Visibility Report — <span class="strike" style="color:var(--muted2)">$99</span> $79</h3>
+        <p class="muted" style="font-size:14.5px;margin:8px 0 0">Live AI-recommendation testing for your market, comparison with 3 competitors, a multi-page scan, and a prioritized 30-day fix plan — reviewed by a specialist, delivered within 1 business day.</p>
+      </div>
+      <div style="text-align:center">
+        <a class="btn btn-primary" href="/pro-report/" data-cta="pro-upsell" style="width:100%;justify-content:center">See the Pro Report →</a>
+        <p class="muted" style="font-size:12px;margin:10px 0 0">30-day money-back guarantee</p>
+      </div>
+    </div>
+
     <div class="cta-band" style="margin-top:44px">
       <h2>Want these fixed — fast?</h2>
       <p>Book a free 15-minute results review. We'll walk through your report together and pinpoint the three fixes that move your score most.</p>
       <div class="cta-row center">
         <a class="btn btn-primary" id="vsBookBtn" href="/contact/">Book My Free Results Review</a>
-        <a class="btn btn-secondary" href="/ai-growth-blueprint/">Get the Full Blueprint</a>
+        <a class="btn btn-secondary" href="/pro-report/">Get the Full Blueprint</a>
       </div>
     </div>
   </div>
@@ -203,7 +215,7 @@
       </details>
       <details>
         <summary>What happens after I get my score?</summary>
-        <p>You'll get a prioritized action list. From there, the <a href="/ai-growth-blueprint/">AI Growth Blueprint</a> turns it into a full strategy, and the <a href="/ai-tools/">AI Tools</a> library helps you execute.</p>
+        <p>You'll get a prioritized action list. From there, the <a href="/pro-report/">Pro Visibility Report</a> turns it into a full strategy, and the <a href="/ai-tools/">AI Tools</a> library helps you execute.</p>
       </details>
     </div>
   </div>
@@ -217,7 +229,7 @@
       <p>Get your AI Visibility Score and a clear plan to become the answer customers are recommended.</p>
       <div class="cta-row center">
         <a class="btn btn-primary" href="#check-score">Check Your Score</a>
-        <a class="btn btn-secondary" href="/ai-growth-blueprint/">Get Your Blueprint</a>
+        <a class="btn btn-secondary" href="/pro-report/">Get Your Blueprint</a>
       </div>
     </div>
   </div>
@@ -235,7 +247,7 @@
       <div class="foot-col">
         <h5>Platform</h5>
         <a href="/ai-visibility-score/">AI Visibility Checker</a>
-        <a href="/ai-growth-blueprint/">AI Growth Blueprint</a>
+        <a href="/pro-report/">Pro Visibility Report</a>
         <a href="/tool-finder/">Tool Finder Quiz</a>
         <a href="/automation-library/">Automation Library</a>
       </div>
@@ -360,7 +372,8 @@
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
         name: rName, email: rEmail, domain: lastDomain,
-        newsletter: document.getElementById("rc-news").checked
+        newsletter: document.getElementById("rc-news").checked,
+        source: JSON.parse(localStorage.getItem("sf_src") || "{}")
       })
     })
       .then(function (res) { return res.json().then(function (d) { return { ok: res.ok, d: d }; }); })
