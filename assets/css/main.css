@@ -546,3 +546,9 @@ html{scroll-behavior:smooth}
 .vs-step::before{border-color:var(--line2)}
 .msh-tag a{border-bottom-color:var(--line2)}
 .icon{background:linear-gradient(180deg,rgba(0,191,179,.14),rgba(45,212,191,.05))}
+
+
+/* light theme: dark-filled buttons keep white text */
+.cta-band .btn-primary{color:#FFFFFF}
+.cta-band .btn-primary:hover{color:#FFFFFF}
+.capture button{color:#FFFFFF}
