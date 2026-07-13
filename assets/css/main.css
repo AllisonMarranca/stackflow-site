@@ -501,3 +501,26 @@ h1,h2,h3,h4,h5,h6,.logo,.h,.btn,.eyebrow{font-family:'Montserrat',system-ui,-app
 .price-card.is-popular{border-width:2px}
 .price-card.is-popular > .pop-badge{position:absolute;top:-12px;left:28px}
 .price-grid .price-card:not(.is-popular){border-color:var(--line2)}
+
+
+/* ---------- scan-focused refactor: demo, pricing, micro-interactions ---------- */
+html{scroll-behavior:smooth}
+.btn{transition:transform .12s ease,background .15s ease,border-color .15s ease,box-shadow .15s ease}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 22px -8px rgba(0,191,179,.55)}
+.hero-check input:focus{box-shadow:0 0 0 3px rgba(0,191,179,.22)}
+.demo-shell{max-width:920px;margin:0 auto}
+.demo-steps{max-width:440px;margin:0 auto 28px}
+.demo-row{transition:opacity .4s ease,transform .4s ease}
+.demo-hide{opacity:0;transform:translateY(8px)}
+.price-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:960px;margin:0 auto;align-items:stretch}
+@media (max-width:820px){.price-mini{grid-template-columns:1fr}}
+.pm-card{position:relative;text-align:left}
+.pm-card .btn{margin-top:auto}
+.pm-price{font-size:34px;font-weight:800;color:#fff;font-family:'Montserrat',system-ui,sans-serif;margin:2px 0 6px}
+.pm-price .strike{font-size:20px;margin-right:6px}
+.pm-popular{border:2px solid var(--accent)}
+.pm-popular .pop-badge{position:absolute;top:-11px;left:24px}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .btn,.card,.demo-row{transition:none}
+}

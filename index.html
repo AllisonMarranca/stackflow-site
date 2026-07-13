@@ -131,9 +131,47 @@
   <div class="wrap">
     <div class="trust-items">
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Real scan, real findings — not a gimmick</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Built by search visibility specialists</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Backed by Mainstreethost — 25+ years in search visibility</span>
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> No email required to see your score</span>
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Our own site scores 100/100</span>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE DEMO: show the experience before asking for anything -->
+<section class="section" id="demo">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Watch it work</p>
+      <h2 class="h">From URL to answers in about ten seconds.</h2>
+      <p class="lead">Here's what scanning a typical local business looks like:</p>
+    </div>
+    <div class="demo-shell">
+      <div class="vs-steps demo-steps" id="demoSteps" aria-hidden="true">
+        <div class="vs-step">Checking ChatGPT access (GPTBot)…</div>
+        <div class="vs-step">Checking Google AI &amp; Gemini access…</div>
+        <div class="vs-step">Checking Claude &amp; Perplexity access…</div>
+        <div class="vs-step">Scanning schema, llms.txt &amp; content signals…</div>
+        <div class="vs-step">Calculating AI Visibility Score…</div>
+      </div>
+      <div class="sample-score">
+        <div class="vs-gauge-card" style="position:static">
+          <div class="gauge" id="demoGauge" style="background:conic-gradient(var(--warn) 0%, #1E293B 0)"><span id="demoScore">0</span></div>
+          <div class="grade-chip" id="demoGrade" style="border-color:var(--warn);color:var(--warn)">AI Readiness: –</div>
+          <div class="muted" style="font-size:13px">out of 100</div>
+          <div class="muted" style="font-size:12px">sample-business.com</div>
+        </div>
+        <div class="vs-checks" id="demoChecks">
+          <div class="vs-check demo-row"><span class="vs-dot pass"></span><div style="flex:1"><div style="display:flex;gap:10px;align-items:baseline"><b>AI crawlers allowed</b><span class="pts">25/25</span></div><p>ChatGPT, Claude, Perplexity and Google AI can all read the site.</p></div></div>
+          <div class="vs-check demo-row"><span class="vs-dot pass"></span><div style="flex:1"><div style="display:flex;gap:10px;align-items:baseline"><b>Site basics</b><span class="pts">20/20</span></div><p>Title, description, headings and sitemap are in place.</p></div></div>
+          <div class="vs-check demo-row"><span class="vs-dot fail"></span><div style="flex:1"><div style="display:flex;gap:10px;align-items:baseline"><b>Business schema</b><span class="pts">0/15</span></div><p>Nothing tells AI engines who this business is or what it does.</p><p class="fix">Fix: add LocalBusiness schema with name, services and location.</p></div></div>
+          <div class="vs-check demo-row"><span class="vs-dot fail"></span><div style="flex:1"><div style="display:flex;gap:10px;align-items:baseline"><b>llms.txt</b><span class="pts">0/10</span></div><p>Missing the file that tells AI engines what to cite this business for.</p><p class="fix">Fix: publish an llms.txt describing the business and key pages.</p></div></div>
+          <div class="vs-check demo-row"><span class="vs-dot warn"></span><div style="flex:1"><div style="display:flex;gap:10px;align-items:baseline"><b>FAQ content</b><span class="pts">0/5</span></div><p>No question-and-answer content AI engines can quote.</p><p class="fix">Fix: answer the questions customers actually ask, with FAQ schema.</p></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="cta-row center" style="margin-top:32px">
+      <a class="btn btn-primary" href="/ai-visibility-score/">See Your Real Score →</a>
     </div>
   </div>
 </section>
@@ -162,34 +200,6 @@
         <h3>Unoptimized = invisible</h3>
         <p>If AI crawlers can't read your site or verify who you are, the engines recommend your competitors by default.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- SECTION 3: SAMPLE SCORE -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head center">
-      <p class="eyebrow">What you get</p>
-      <h2 class="h">A real score. Specific findings. Clear fixes.</h2>
-      <p class="lead">Here's what a typical local business report looks like:</p>
-    </div>
-    <div class="sample-score">
-      <div class="vs-gauge-card" style="position:static">
-        <div class="gauge" style="background:conic-gradient(var(--warn) 54%, #1E293B 0)"><span>54</span></div>
-        <div class="muted" style="font-size:13px">out of 100 · Needs work</div>
-        <div class="muted" style="font-size:12px">sample-business.com</div>
-      </div>
-      <div class="vs-checks">
-        <div class="vs-check"><span class="vs-dot pass"></span><div style="flex:1"><div style="display:flex;gap:10px;align-items:baseline"><b>AI crawlers allowed</b><span class="pts">25/25</span></div><p>ChatGPT, Claude, Perplexity and Google-Extended can all read the site.</p></div></div>
-        <div class="vs-check"><span class="vs-dot pass"></span><div style="flex:1"><div style="display:flex;gap:10px;align-items:baseline"><b>Site basics</b><span class="pts">20/20</span></div><p>Title, description, headings and sitemap are in place.</p></div></div>
-        <div class="vs-check"><span class="vs-dot fail"></span><div style="flex:1"><div style="display:flex;gap:10px;align-items:baseline"><b>Business schema</b><span class="pts">0/15</span></div><p>No structured data telling AI engines who this business is or what it does.</p><p class="fix">Fix: add LocalBusiness schema with name, services and location.</p></div></div>
-        <div class="vs-check"><span class="vs-dot fail"></span><div style="flex:1"><div style="display:flex;gap:10px;align-items:baseline"><b>llms.txt</b><span class="pts">0/10</span></div><p>Missing the file that tells AI engines what to cite this business for.</p><p class="fix">Fix: publish an llms.txt describing the business and key pages.</p></div></div>
-        <div class="vs-check"><span class="vs-dot warn"></span><div style="flex:1"><div style="display:flex;gap:10px;align-items:baseline"><b>FAQ content</b><span class="pts">0/5</span></div><p>No question-and-answer content AI engines can quote directly.</p><p class="fix">Fix: answer the questions customers actually ask, with FAQ schema.</p></div></div>
-      </div>
-    </div>
-    <div class="cta-row center" style="margin-top:32px">
-      <a class="btn btn-primary" href="/ai-visibility-score/">See Your Real Score →</a>
     </div>
   </div>
 </section>
@@ -244,42 +254,33 @@
   </div>
 </section>
 
-<!-- SECTION 6: RECOMMENDED TOOLS -->
-<section class="section">
+<!-- PRICING -->
+<section class="section" id="pricing">
   <div class="wrap">
     <div class="section-head center">
-      <p class="eyebrow">Recommended tools</p>
-      <h2 class="h">Tools we actually recommend to improve AI visibility.</h2>
-      <p class="lead">Not a directory — a short list, grouped by the gap each one closes. We disclose every affiliate relationship.</p>
+      <p class="eyebrow">Pricing</p>
+      <h2 class="h">Start free. Go deeper when you're ready.</h2>
     </div>
-    <div class="cat-grid" style="grid-template-columns:repeat(6,1fr)">
-      <a class="cat" href="/ai-tools/#writing">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg></div>
-        <b>Content</b><small>Quotable, on-brand pages</small>
-      </a>
-      <a class="cat" href="/ai-tools/#seo">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
-        <b>SEO</b><small>Rank in classic + AI search</small>
-      </a>
-      <a class="cat" href="/ai-tools/#automation">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h11"/><path d="M4 12h16"/><path d="M4 17h9"/><circle cx="18" cy="7" r="2"/><circle cx="15" cy="17" r="2"/></svg></div>
-        <b>Automation</b><small>Reviews &amp; follow-up on autopilot</small>
-      </a>
-      <a class="cat" href="/ai-tools/#analytics">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
-        <b>Analytics</b><small>Know what's working</small>
-      </a>
-      <a class="cat" href="/ai-tools/#crm">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
-        <b>CRM</b><small>Capture the leads AI sends</small>
-      </a>
-      <a class="cat" href="/ai-tools/#email">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
-        <b>Email</b><small>Nurture what you capture</small>
-      </a>
-    </div>
-    <div class="cta-row center" style="margin-top:32px">
-      <a class="btn btn-ghost" href="/ai-tools/">See all recommendations →</a>
+    <div class="price-mini">
+      <div class="card pm-card">
+        <p class="eyebrow" style="margin-bottom:4px">Free Score</p>
+        <div class="pm-price">$0</div>
+        <p>Instant scan, score, A–F grade, and plain-English fixes. No email required.</p>
+        <a class="btn btn-ghost" href="/ai-visibility-score/" style="justify-content:center">Run a Free Scan</a>
+      </div>
+      <div class="card pm-card pm-popular">
+        <span class="pop-badge">Most popular</span>
+        <p class="eyebrow" style="margin-bottom:4px">AI Visibility Audit</p>
+        <div class="pm-price"><s class="strike">$49</s> $29</div>
+        <p>AI-recommendation testing, competitor comparison, 30-day plan, walkthrough call.</p>
+        <a class="btn btn-primary" href="/pro-report/" style="justify-content:center" data-cta="pricing-audit">Get the Audit</a>
+      </div>
+      <div class="card pm-card">
+        <p class="eyebrow" style="margin-bottom:4px">Pro Audit</p>
+        <div class="pm-price"><s class="strike">$199</s> $149</div>
+        <p>Agency-grade: citations, traffic &amp; keyword gaps, technical review, strategy session.</p>
+        <a class="btn btn-secondary" href="/pro-report/#pro" style="justify-content:center" data-cta="pricing-pro">Go Pro</a>
+      </div>
     </div>
   </div>
 </section>
@@ -332,6 +333,46 @@
         <summary>How often should I check my score?</summary>
         <p>After any meaningful site change, and monthly as a pulse-check. AI engines re-crawl regularly and your competitors' visibility changes too. It's free and takes under a minute.</p>
       </details>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: RECOMMENDED TOOLS -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Recommended tools</p>
+      <h2 class="h">Fixing gaps yourself? These are the tools we trust.</h2>
+      <p class="lead">Not a directory — a short list, grouped by the gap each one closes. We disclose every affiliate relationship.</p>
+    </div>
+    <div class="cat-grid" style="grid-template-columns:repeat(6,1fr)">
+      <a class="cat" href="/ai-tools/#writing">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg></div>
+        <b>Content</b><small>Quotable, on-brand pages</small>
+      </a>
+      <a class="cat" href="/ai-tools/#seo">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <b>SEO</b><small>Rank in classic + AI search</small>
+      </a>
+      <a class="cat" href="/ai-tools/#automation">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h11"/><path d="M4 12h16"/><path d="M4 17h9"/><circle cx="18" cy="7" r="2"/><circle cx="15" cy="17" r="2"/></svg></div>
+        <b>Automation</b><small>Reviews &amp; follow-up on autopilot</small>
+      </a>
+      <a class="cat" href="/ai-tools/#analytics">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
+        <b>Analytics</b><small>Know what's working</small>
+      </a>
+      <a class="cat" href="/ai-tools/#crm">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
+        <b>CRM</b><small>Capture the leads AI sends</small>
+      </a>
+      <a class="cat" href="/ai-tools/#email">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+        <b>Email</b><small>Nurture what you capture</small>
+      </a>
+    </div>
+    <div class="cta-row center" style="margin-top:32px">
+      <a class="btn btn-ghost" href="/ai-tools/">See all recommendations →</a>
     </div>
   </div>
 </section>
@@ -399,6 +440,69 @@
     var d = f.querySelector("input").value.trim();
     if (d) window.location.href = "/ai-visibility-score/?domain=" + encodeURIComponent(d) + "#check-score";
   });
+})();
+</script>
+<script>
+// Auto-playing scan demo: engine steps -> score count-up -> findings reveal. Loops.
+(function () {
+  var shell = document.getElementById("demoSteps");
+  if (!shell) return;
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var steps = shell.querySelectorAll(".vs-step");
+  var rows = document.querySelectorAll("#demoChecks .demo-row");
+  var gauge = document.getElementById("demoGauge");
+  var num = document.getElementById("demoScore");
+  var grade = document.getElementById("demoGrade");
+  var TARGET = 54;
+
+  function showFinal() {
+    steps.forEach(function (st) { st.classList.add("on"); });
+    rows.forEach(function (r) { r.classList.remove("demo-hide"); });
+    num.textContent = TARGET;
+    grade.textContent = "AI Readiness: D";
+    gauge.style.background = "conic-gradient(var(--warn) " + TARGET + "%, #1E293B 0)";
+  }
+  if (reduced) { showFinal(); return; }
+
+  var playing = false;
+  function play() {
+    if (playing) return; playing = true;
+    steps.forEach(function (st) { st.classList.remove("on"); });
+    rows.forEach(function (r) { r.classList.add("demo-hide"); });
+    num.textContent = "0"; grade.textContent = "AI Readiness: –";
+    gauge.style.background = "conic-gradient(var(--warn) 0%, #1E293B 0)";
+    var i = 0;
+    var stepTimer = setInterval(function () {
+      if (i < steps.length) { steps[i].classList.add("on"); i++; return; }
+      clearInterval(stepTimer);
+      var cur = 0;
+      var anim = setInterval(function () {
+        cur = Math.min(TARGET, cur + 2);
+        num.textContent = cur;
+        gauge.style.background = "conic-gradient(var(--warn) " + cur + "%, #1E293B 0)";
+        if (cur >= TARGET) {
+          clearInterval(anim);
+          grade.textContent = "AI Readiness: D";
+          var j = 0;
+          var rowTimer = setInterval(function () {
+            if (j < rows.length) { rows[j].classList.remove("demo-hide"); j++; return; }
+            clearInterval(rowTimer);
+            setTimeout(function () { playing = false; play(); }, 6000);
+          }, 350);
+        }
+      }, 30);
+    }, 700);
+  }
+
+  var seen = false;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting && !seen) { seen = true; play(); io.disconnect(); }
+    });
+  }, { threshold: 0.35 });
+  io.observe(document.getElementById("demo"));
+  // Fallback: some browsers/embeds never fire IO — start anyway after 3s (it loops)
+  setTimeout(function () { if (!seen) { seen = true; play(); io.disconnect(); } }, 3000);
 })();
 </script>
 </body>
