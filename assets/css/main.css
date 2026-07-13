@@ -7,18 +7,18 @@
 
 :root{
   --bg:#0B1120;
-  --panel:#0F172A;
-  --panel2:#111827;
-  --panel3:#0d1526;
-  --text:#E2E8F0;
-  --muted:#94A3B8;
-  --muted2:#64748B;
+  --panel:#141F36;
+  --panel2:#182642;
+  --panel3:#101A2E;
+  --text:#EDF2F9;
+  --muted:#A9B6CA;
+  --muted2:#8494AC;
   --accent:#00BFB3;
   --accent2:#2DD4BF;
   --green:#26D07C;
   --warn:#F59E0B;
-  --line:#1E293B;
-  --line2:#243449;
+  --line:#283A55;
+  --line2:#3A4F6E;
   --radius:14px;
   --maxw:1160px;
   --shadow:0 20px 50px -24px rgba(0,0,0,.7);
