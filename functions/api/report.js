@@ -98,51 +98,79 @@ function esc(t) {
 }
 
 function statusBits(status) {
-  if (status === "pass") return { mark: "&#9989;", color: "#26D07C", word: "Pass" };
-  if (status === "warn") return { mark: "&#9888;&#65039;", color: "#F59E0B", word: "Attention" };
-  return { mark: "&#10060;", color: "#F87171", word: "Missing" };
+  if (status === "pass") return { mark: "&#10003;", color: "#149A5B", word: "Pass" };
+  if (status === "warn") return { mark: "!", color: "#B45309", word: "Attention" };
+  return { mark: "&#10005;", color: "#DC2626", word: "Missing" };
 }
 
 function reportHtml(name, r) {
-  const scoreColor = r.score >= 80 ? "#26D07C" : r.score >= 60 ? "#00BFB3" : r.score >= 40 ? "#F59E0B" : "#F87171";
+  const scoreColor = r.score >= 80 ? "#149A5B" : r.score >= 60 ? "#0B8F84" : r.score >= 40 ? "#B45309" : "#DC2626";
   const rows = (r.checks || []).map(function (c) {
     const b = statusBits(c.status);
     return '<tr>' +
-      '<td style="padding:12px 14px;border-bottom:1px solid #1E293B;vertical-align:top;white-space:nowrap">' + b.mark + '</td>' +
-      '<td style="padding:12px 14px 12px 0;border-bottom:1px solid #1E293B;vertical-align:top">' +
-        '<div style="color:#FFFFFF;font-weight:700;font-size:14px">' + esc(c.label) +
-        ' <span style="color:#64748B;font-weight:400;font-size:12px">&nbsp;' + c.points + "/" + c.max + '</span></div>' +
-        '<div style="color:#94A3B8;font-size:13px;line-height:1.5;margin-top:2px">' + esc(c.detail) + '</div>' +
-        (c.fix ? '<div style="color:#2DD4BF;font-size:13px;line-height:1.5;margin-top:4px"><b>Fix:</b> ' + esc(c.fix) + '</div>' : "") +
+      '<td width="34" style="padding:14px 0;border-bottom:1px solid #EDF1F7;vertical-align:top;text-align:center;' +
+        'font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:700;color:' + b.color + '">' + b.mark + '</td>' +
+      '<td style="padding:14px 0 14px 4px;border-bottom:1px solid #EDF1F7;vertical-align:top;font-family:Arial,Helvetica,sans-serif">' +
+        '<div style="color:#132032;font-weight:700;font-size:14px">' + esc(c.label) +
+        ' <span style="color:#8393A9;font-weight:400;font-size:12px">&nbsp;' + c.points + "/" + c.max + '</span></div>' +
+        '<div style="color:#5A6A82;font-size:13px;line-height:1.5;margin-top:3px">' + esc(c.detail) + '</div>' +
+        (c.fix ? '<div style="color:#0B8F84;font-size:13px;line-height:1.5;margin-top:4px"><b>Fix:</b> ' + esc(c.fix) + '</div>' : "") +
       '</td></tr>';
   }).join("");
 
-  return '<!DOCTYPE html><html><body style="margin:0;padding:0;background:#0B1120">' +
-  '<div style="max-width:600px;margin:0 auto;padding:32px 20px;font-family:Arial,Helvetica,sans-serif">' +
-    '<div style="font-size:22px;font-weight:800;color:#FFFFFF;margin-bottom:24px">Stack<span style="color:#00BFB3">Flow</span></div>' +
-    '<div style="background:#0F172A;border:1px solid #243449;border-radius:14px;padding:28px">' +
-      '<p style="color:#E2E8F0;font-size:15px;margin:0 0 6px">Hi ' + esc(name) + ",</p>" +
-      '<p style="color:#94A3B8;font-size:14px;line-height:1.6;margin:0 0 22px">Here\'s the AI Visibility Report you requested for <b style="color:#E2E8F0">' + esc(r.domain) + "</b>.</p>" +
-      '<div style="text-align:center;padding:18px 0 24px">' +
-        '<div style="font-size:56px;font-weight:800;color:' + scoreColor + ';line-height:1">' + r.score + '</div>' +
-        '<div style="color:#94A3B8;font-size:13px;margin-top:4px">out of 100 &middot; ' + esc(r.grade) + '</div>' +
-      '</div>' +
-      '<p style="color:#94A3B8;font-size:14px;line-height:1.6;margin:0 0 20px">' + esc(r.summary) + '</p>' +
-      '<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse">' + rows + '</table>' +
-      '<div style="text-align:center;margin-top:28px">' +
-        '<a href="' + BOOKING_URL + '" style="display:inline-block;background:#00BFB3;color:#00151f;font-weight:700;font-size:15px;padding:14px 26px;border-radius:10px;text-decoration:none">Book a Free 15-Minute Results Review</a>' +
-        '<div style="color:#64748B;font-size:12px;margin-top:10px">We\'ll walk through this report together and pinpoint the three fixes that matter most.</div>' +
-      '</div>' +
-    '</div>' +
-    '<div style="color:#64748B;font-size:11px;line-height:1.6;margin-top:20px;text-align:center">' +
+  return '<!DOCTYPE html><html><body style="margin:0;padding:0;background:#F0F4F8">' +
+  '<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background:#F0F4F8"><tr><td align="center" style="padding:28px 14px">' +
+  '<table role="presentation" cellpadding="0" cellspacing="0" width="600" style="max-width:600px;width:100%">' +
+
+    // wordmark
+    '<tr><td style="padding:0 4px 16px;font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:800;color:#132032">' +
+      'Stack<span style="color:#00BFB3">Flow</span></td></tr>' +
+
+    // card
+    '<tr><td>' +
+    '<table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background:#FFFFFF;border:1px solid #E3E9F1;border-radius:14px">' +
+      '<tr><td height="5" style="background:#00BFB3;border-radius:14px 14px 0 0;font-size:0;line-height:0">&nbsp;</td></tr>' +
+      '<tr><td style="padding:28px 30px 30px;font-family:Arial,Helvetica,sans-serif">' +
+
+        '<p style="color:#132032;font-size:15px;margin:0 0 6px">Hi ' + esc(name) + ",</p>" +
+        '<p style="color:#5A6A82;font-size:14px;line-height:1.6;margin:0 0 8px">Here\'s the AI Visibility Report you requested for <b style="color:#132032">' + esc(r.domain) + "</b>.</p>" +
+
+        // score
+        '<table role="presentation" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" style="padding:22px 0 26px;font-family:Arial,Helvetica,sans-serif">' +
+          '<div style="font-size:62px;font-weight:800;color:' + scoreColor + ';line-height:1">' + r.score + '</div>' +
+          '<div style="color:#8393A9;font-size:13px;margin-top:6px">out of 100 &middot; <b style="color:#132032">' + esc(r.grade) + '</b></div>' +
+          '<div style="color:#5A6A82;font-size:14px;line-height:1.6;margin-top:14px;max-width:440px">' + esc(r.summary) + '</div>' +
+        '</td></tr></table>' +
+
+        // checks
+        '<div style="color:#8393A9;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 0 2px;border-bottom:2px solid #E3E9F1">Your 12-signal scan</div>' +
+        '<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse">' + rows + '</table>' +
+
+        // CTA
+        '<table role="presentation" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" style="padding:30px 0 0;font-family:Arial,Helvetica,sans-serif">' +
+          '<table role="presentation" cellpadding="0" cellspacing="0"><tr>' +
+            '<td style="background:#00BFB3;border-radius:10px">' +
+              '<a href="' + BOOKING_URL + '" style="display:inline-block;font-family:Arial,Helvetica,sans-serif;color:#FFFFFF;font-weight:700;font-size:15px;padding:14px 28px;text-decoration:none">Book a Free 15-Minute Results Review</a>' +
+            '</td></tr></table>' +
+          '<div style="color:#8393A9;font-size:12.5px;line-height:1.6;margin-top:12px;max-width:400px">We\'ll walk through this report together and pinpoint the three fixes that matter most.</div>' +
+          '<div style="color:#5A6A82;font-size:13px;line-height:1.6;margin-top:18px;padding-top:16px;border-top:1px solid #EDF1F7">Want the deep version? The <a href="https://trystackflow.com/pro-report/" style="color:#0B8F84;font-weight:700">AI Visibility Audit</a> tests who AI actually recommends in your market, compares you to competitors, and includes a 30-day fix plan &mdash; $29.</div>' +
+        '</td></tr></table>' +
+
+      '</td></tr>' +
+    '</table>' +
+    '</td></tr>' +
+
+    // footer
+    '<tr><td style="color:#8393A9;font-family:Arial,Helvetica,sans-serif;font-size:11px;line-height:1.7;padding:18px 10px 0;text-align:center">' +
       'You received this one-time report because you requested it at ' +
-      '<a href="https://trystackflow.com/ai-visibility-score/" style="color:#94A3B8">trystackflow.com</a>. ' +
+      '<a href="https://trystackflow.com/ai-visibility-score/" style="color:#5A6A82">trystackflow.com</a>. ' +
       'We won\'t email you again unless you opted into tips or contact us at ' +
-      '<a href="mailto:hello@trystackflow.com" style="color:#94A3B8">hello@trystackflow.com</a>.<br>' +
+      '<a href="mailto:hello@trystackflow.com" style="color:#5A6A82">hello@trystackflow.com</a>.<br>' +
       'StackFlow &middot; The AI Visibility Platform &middot; in partnership with Mainstreethost &middot; ' +
-      '<a href="https://trystackflow.com/privacy/" style="color:#94A3B8">Privacy Policy</a>' +
-    '</div>' +
-  '</div></body></html>';
+      '<a href="https://trystackflow.com/privacy/" style="color:#5A6A82">Privacy Policy</a>' +
+    '</td></tr>' +
+
+  '</table></td></tr></table></body></html>';
 }
 
 function leadHtml(name, email, newsletter, r, source) {
