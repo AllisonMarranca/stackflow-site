@@ -532,7 +532,7 @@ html{scroll-behavior:smooth}
 .hero::before{background:
   radial-gradient(560px 340px at 50% -8%,rgba(0,191,179,.14),transparent 70%),
   radial-gradient(420px 300px at 85% 12%,rgba(45,212,191,.08),transparent 70%)}
-.hero h1 em{background:linear-gradient(180deg,transparent 62%,rgba(0,191,179,.22) 62%)}
+.hero h1 em{background:none;color:#0B8F84}
 .trustbar{background:linear-gradient(180deg,rgba(0,191,179,.06),transparent)}
 .btn-primary{color:#053B36}
 .btn-primary:hover{color:#053B36}
