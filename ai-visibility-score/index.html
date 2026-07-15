@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NHPQXQJ86P"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NHPQXQJ86P');</script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Free AI Visibility Score — See How Visible Your Business Is in AI Search | StackFlow</title>
@@ -297,7 +299,7 @@
   </div>
 </footer>
 
-<script src="/assets/js/main.js?v=light3"></script>
+<script src="/assets/js/main.js?v=ga1"></script>
 <script>
 (function () {
   var BOOKING_URL = "https://calendly.com/getstackflow/ai-visibility-results-review";
@@ -398,6 +400,7 @@
         document.getElementById("rcIntro").hidden = true;
         rForm.hidden = true;
         document.getElementById("rcDone").hidden = false;
+        if (typeof gtag === "function") gtag("event", "generate_lead", { method: "report_email" });
       })
       .catch(function () {
         rBtn.disabled = false; rBtn.textContent = "Send My Report";
