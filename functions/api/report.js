@@ -166,7 +166,7 @@ function reportHtml(name, r) {
       '<a href="https://trystackflow.com/ai-visibility-score/" style="color:#5A6A82">trystackflow.com</a>. ' +
       'We won\'t email you again unless you opted into tips or contact us at ' +
       '<a href="mailto:hello@trystackflow.com" style="color:#5A6A82">hello@trystackflow.com</a>.<br>' +
-      'StackFlow &middot; The AI Visibility Platform &middot; in partnership with Mainstreethost &middot; ' +
+      'StackFlow &middot; The AI Visibility Platform &middot; ' +
       '<a href="https://trystackflow.com/privacy/" style="color:#5A6A82">Privacy Policy</a>' +
     '</td></tr>' +
 
