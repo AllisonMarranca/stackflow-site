@@ -16,9 +16,9 @@
     a.addEventListener('click', function () {
       var id = a.getAttribute('data-cta');
       if (typeof gtag === 'function') {
-        gtag('event', 'cta_click', { cta_id: id });
+        gtag('event', 'cta_click', { cta_id: id, transport_type: 'beacon' });
         if ((a.href || '').indexOf('lemonsqueezy.com') > -1) {
-          gtag('event', 'begin_checkout', { cta_id: id });
+          gtag('event', 'begin_checkout', { cta_id: id, transport_type: 'beacon' });
         }
       }
       console.log('CTA click:', id, new Date().toISOString());
