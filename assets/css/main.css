@@ -70,7 +70,8 @@ h3.h{font-size:clamp(22px,3vw,28px);color:var(--heading);margin:0 0 12px;font-we
   backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
 .logo{font-weight:800;letter-spacing:-.03em;font-size:20px;color:var(--heading)}
-.logo span{color:var(--accent)}
+.logo .wordmark{color:var(--heading)}
+.logo b{color:var(--accent);font-weight:inherit}
 .nav-links{display:flex;align-items:center;gap:22px}
 .nav-links a:not(.btn){font-size:14.5px;color:var(--muted);font-weight:500}
 .nav-links a:not(.btn):hover,.nav-links a.active{color:var(--heading)}
@@ -537,7 +538,7 @@ html{scroll-behavior:smooth}
 .btn-primary{color:#053B36}
 .btn-primary:hover{color:#053B36}
 .btn-secondary{color:var(--heading)}
-.logo span{color:#00A396}
+.logo b{color:#00A396}
 .quiz-opt.selected{background:linear-gradient(180deg,rgba(0,191,179,.10),transparent)}
 .pro-upsell{background:linear-gradient(180deg,rgba(0,191,179,.08),transparent)}
 .compare .hl,.compare th.hl{background:rgba(0,191,179,.08)}
