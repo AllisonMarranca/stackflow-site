@@ -6,4 +6,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://trystackflow.com/sitemap.xml
+Sitemap: https://straightgrade.com/sitemap.xml

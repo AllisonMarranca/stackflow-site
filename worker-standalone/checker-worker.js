@@ -6,8 +6,8 @@
  *     -> Create -> Worker ("Start with Hello World") -> name it: stackflow-checker -> Deploy
  *  2. Click "Edit code", DELETE the sample code, paste THIS ENTIRE FILE, click Deploy.
  *  3. Back on the worker page -> Settings -> Domains & Routes -> Add -> Route:
- *        Route:  trystackflow.com/api/*      Zone: trystackflow.com
- *  4. Done. Test: https://trystackflow.com/api/check?domain=mainstreethost.com
+ *        Route:  straightgrade.com/api/*      Zone: straightgrade.com
+ *  4. Done. Test: https://straightgrade.com/api/check?domain=mainstreethost.com
  *
  * (Once GitHub auto-deploy is set up, the same engine ships as a Pages Function
  *  in functions/api/check.js and this worker can be deleted.)
@@ -33,7 +33,7 @@
  */
 
 const AI_BOTS = ["GPTBot", "ClaudeBot", "PerplexityBot", "Google-Extended", "CCBot"];
-const UA = "Mozilla/5.0 (compatible; StackFlowChecker/1.0; +https://trystackflow.com/ai-visibility-score/)";
+const UA = "Mozilla/5.0 (compatible; StackFlowChecker/1.0; +https://straightgrade.com/ai-visibility-score/)";
 
 async function handleCheck(request) {
   const reqUrl = new URL(request.url);

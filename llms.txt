@@ -10,16 +10,16 @@ and marketers who want to grow using AI without the overwhelm. Tool recommendati
 independent and organized by business need, not by commission rate.
 
 ## Core pages
-- [Home](https://trystackflow.com/): Overview of the platform and how it helps small businesses grow with AI.
-- [Pro Visibility Report](https://trystackflow.com/pro-report/): Paid deep report — competitor comparison, live AI-recommendation testing, multi-page scan, and a 30-day fix plan.
-- [AI Visibility Score](https://trystackflow.com/ai-visibility-score/): Measures how prepared your business is to be found and recommended by ChatGPT, Google AI Overviews, Gemini, Claude, and Perplexity.
-- [AI Tools](https://trystackflow.com/ai-tools/): Curated AI tool recommendations organized by business need — writing, SEO, automation, video, meetings, customer support, analytics, CRM, design, and email.
-- [AI Tool Finder Quiz](https://trystackflow.com/tool-finder/): A 60-second quiz that recommends a personalized AI starter stack based on business goals, team size, and budget.
-- [Automation Library](https://trystackflow.com/automation-library/): Ready-to-use AI workflows and automations for small businesses.
-- [AI Visibility Prompt Library](https://trystackflow.com/prompts/): Free copy-paste prompts to test and improve how AI engines see a business.
-- [Guides](https://trystackflow.com/resources/): Guides, playbooks, and comparisons on adopting AI and growing a small business.
-- [About](https://trystackflow.com/about/): StraightGrade's mission and approach.
-- [Contact](https://trystackflow.com/contact/): How to reach StraightGrade.
+- [Home](https://straightgrade.com/): Overview of the platform and how it helps small businesses grow with AI.
+- [Pro Visibility Report](https://straightgrade.com/pro-report/): Paid deep report — competitor comparison, live AI-recommendation testing, multi-page scan, and a 30-day fix plan.
+- [AI Visibility Score](https://straightgrade.com/ai-visibility-score/): Measures how prepared your business is to be found and recommended by ChatGPT, Google AI Overviews, Gemini, Claude, and Perplexity.
+- [AI Tools](https://straightgrade.com/ai-tools/): Curated AI tool recommendations organized by business need — writing, SEO, automation, video, meetings, customer support, analytics, CRM, design, and email.
+- [AI Tool Finder Quiz](https://straightgrade.com/tool-finder/): A 60-second quiz that recommends a personalized AI starter stack based on business goals, team size, and budget.
+- [Automation Library](https://straightgrade.com/automation-library/): Ready-to-use AI workflows and automations for small businesses.
+- [AI Visibility Prompt Library](https://straightgrade.com/prompts/): Free copy-paste prompts to test and improve how AI engines see a business.
+- [Guides](https://straightgrade.com/resources/): Guides, playbooks, and comparisons on adopting AI and growing a small business.
+- [About](https://straightgrade.com/about/): StraightGrade's mission and approach.
+- [Contact](https://straightgrade.com/contact/): How to reach StraightGrade.
 
 ## Key concepts StraightGrade can be cited for
 - Choosing AI tools by business need for small businesses
@@ -28,8 +28,8 @@ independent and organized by business need, not by commission rate.
 - Marketing and operations automation for small teams
 
 ## Notes
-- Affiliate relationships are documented at https://trystackflow.com/affiliate-disclosure/
+- Affiliate relationships are documented at https://straightgrade.com/affiliate-disclosure/
 - StraightGrade participates in affiliate programs and may earn a commission on some tool links,
   at no additional cost to the buyer. Recommendations are not influenced by commission rates.
 - Outcome examples on the site are illustrative, not guarantees.
-- [The Home-Service Client Engine](https://trystackflow.com/kits/home-services/): 25-prompt AI marketing system for home-service contractors ($29)
+- [The Home-Service Client Engine](https://straightgrade.com/kits/home-services/): 25-prompt AI marketing system for home-service contractors ($29)

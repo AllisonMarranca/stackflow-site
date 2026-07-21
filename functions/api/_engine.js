@@ -17,7 +17,7 @@
  */
 
 const AI_BOTS = ["GPTBot", "ClaudeBot", "PerplexityBot", "Google-Extended", "CCBot"];
-const UA = "Mozilla/5.0 (compatible; StraightGradeChecker/1.0; +https://trystackflow.com/ai-visibility-score/)";
+const UA = "Mozilla/5.0 (compatible; StraightGradeChecker/1.0; +https://straightgrade.com/ai-visibility-score/)";
 
 export function normalizeDomain(raw) {
   let domain = String(raw || "").trim().toLowerCase();

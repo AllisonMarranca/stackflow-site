@@ -153,7 +153,7 @@ function reportHtml(name, r) {
               '<a href="' + BOOKING_URL + '" style="display:inline-block;font-family:Arial,Helvetica,sans-serif;color:#FFFFFF;font-weight:700;font-size:15px;padding:14px 28px;text-decoration:none">Book a Free 15-Minute Results Review</a>' +
             '</td></tr></table>' +
           '<div style="color:#8393A9;font-size:12.5px;line-height:1.6;margin-top:12px;max-width:400px">We\'ll walk through this report together and pinpoint the three fixes that matter most.</div>' +
-          '<div style="color:#5A6A82;font-size:13px;line-height:1.6;margin-top:18px;padding-top:16px;border-top:1px solid #EDF1F7">Want the deep version? The <a href="https://trystackflow.com/pro-report/" style="color:#0B8F84;font-weight:700">AI Visibility Audit</a> tests who AI actually recommends in your market, compares you to competitors, and includes a 30-day fix plan &mdash; $29.</div>' +
+          '<div style="color:#5A6A82;font-size:13px;line-height:1.6;margin-top:18px;padding-top:16px;border-top:1px solid #EDF1F7">Want the deep version? The <a href="https://straightgrade.com/pro-report/" style="color:#0B8F84;font-weight:700">AI Visibility Audit</a> tests who AI actually recommends in your market, compares you to competitors, and includes a 30-day fix plan &mdash; $29.</div>' +
         '</td></tr></table>' +
 
       '</td></tr>' +
@@ -163,11 +163,11 @@ function reportHtml(name, r) {
     // footer
     '<tr><td style="color:#8393A9;font-family:Arial,Helvetica,sans-serif;font-size:11px;line-height:1.7;padding:18px 10px 0;text-align:center">' +
       'You received this one-time report because you requested it at ' +
-      '<a href="https://trystackflow.com/ai-visibility-score/" style="color:#5A6A82">trystackflow.com</a>. ' +
+      '<a href="https://straightgrade.com/ai-visibility-score/" style="color:#5A6A82">straightgrade.com</a>. ' +
       'We won\'t email you again unless you opted into tips or contact us at ' +
-      '<a href="mailto:hello@trystackflow.com" style="color:#5A6A82">hello@trystackflow.com</a>.<br>' +
+      '<a href="mailto:hello@straightgrade.com" style="color:#5A6A82">hello@straightgrade.com</a>.<br>' +
       'StraightGrade &middot; The AI Visibility Platform &middot; ' +
-      '<a href="https://trystackflow.com/privacy/" style="color:#5A6A82">Privacy Policy</a>' +
+      '<a href="https://straightgrade.com/privacy/" style="color:#5A6A82">Privacy Policy</a>' +
     '</td></tr>' +
 
   '</table></td></tr></table></body></html>';
@@ -188,6 +188,6 @@ function leadHtml(name, email, newsletter, r, source) {
     "<b>Gaps:</b> " + fails + "<br>" +
     "<b>Newsletter opt-in:</b> " + (newsletter ? "YES — add to tips list" : "no") + "</p>" +
     "<p><b>Lead source:</b><br>" + srcPairs + "</p>" +
-    '<p>Full report was emailed to the lead. <a href="https://trystackflow.com/api/check?domain=' + encodeURIComponent(r.domain) + '">Re-run their check</a>.</p>' +
+    '<p>Full report was emailed to the lead. <a href="https://straightgrade.com/api/check?domain=' + encodeURIComponent(r.domain) + '">Re-run their check</a>.</p>' +
     "</div>";
 }

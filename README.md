@@ -1,6 +1,6 @@
 # StackFlow — AI Growth Platform for Small Businesses
 
-The trystackflow.com website. Static, multi-page HTML — no framework and no build step.
+The straightgrade.com website. Static, multi-page HTML — no framework and no build step.
 Repositioned from an AI-tools affiliate landing page into a broader AI growth platform,
 while preserving the existing affiliate strategy (tools are now framed as recommended
 picks inside a larger customer journey).
@@ -29,7 +29,7 @@ stackflow-site/
 ## Conventions
 
 - **Root-absolute paths** (`/ai-tools/`, `/assets/css/main.css`). The site must be served
-  from the domain root (as trystackflow.com is). Clean URLs use folder/`index.html`.
+  from the domain root (as straightgrade.com is). Clean URLs use folder/`index.html`.
 - **Shared header/footer** are duplicated on each page (no templating). If you change the
   nav or footer, update every page. The `class="active"` marker highlights the current page.
 
@@ -53,7 +53,7 @@ platform or CRM (e.g. via a form action URL or embedded provider) before launch.
 
 ## Deploy
 
-Upload the entire `stackflow-site/` folder contents to the web root of trystackflow.com
+Upload the entire `stackflow-site/` folder contents to the web root of straightgrade.com
 (or push to your static host / GitHub Pages). Because paths are root-absolute, serve from
 the domain root, not a subfolder.
 
