@@ -1,4 +1,4 @@
-/* StackFlow — shared client script */
+/* StraightGrade — shared client script */
 (function () {
   // Mobile nav toggle
   var toggle = document.querySelector('.nav-toggle');

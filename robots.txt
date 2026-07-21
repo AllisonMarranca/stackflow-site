@@ -1,4 +1,4 @@
-# StackFlow robots.txt
+# StraightGrade robots.txt
 # Allow all reputable crawlers, including AI answer engines. Adjust if you want to
 # exclude specific bots.
 

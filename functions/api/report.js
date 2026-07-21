@@ -14,7 +14,7 @@
  */
 import { analyzeDomain, normalizeDomain, json } from "./_engine.js";
 
-const FROM_REPORTS = "StackFlow Reports <reports@trystackflow.com>";
+const FROM_REPORTS = "StraightGrade Reports <reports@trystackflow.com>";
 const LEAD_INBOX = "hello@trystackflow.com";
 const BOOKING_URL = "https://calendly.com/getstackflow/ai-visibility-results-review";
 
@@ -53,7 +53,7 @@ export async function onRequestPost(context) {
     return json({ error: "We couldn't send the email just now — please try again in a minute, or book a free review instead." }, 502);
   }
 
-  // 2) Lead notification to StackFlow (failure here shouldn't fail the request)
+  // 2) Lead notification to StraightGrade (failure here shouldn't fail the request)
   try {
     await resend(env.RESEND_API_KEY, {
       from: FROM_REPORTS,
@@ -124,7 +124,7 @@ function reportHtml(name, r) {
 
     // wordmark
     '<tr><td style="padding:0 4px 16px;font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:800;color:#132032">' +
-      'Stack<span style="color:#00BFB3">Flow</span></td></tr>' +
+      'Str<span style="color:#00BFB3">ai</span>ght<span style="color:#00BFB3">Grade</span></td></tr>' +
 
     // card
     '<tr><td>' +
@@ -166,7 +166,7 @@ function reportHtml(name, r) {
       '<a href="https://trystackflow.com/ai-visibility-score/" style="color:#5A6A82">trystackflow.com</a>. ' +
       'We won\'t email you again unless you opted into tips or contact us at ' +
       '<a href="mailto:hello@trystackflow.com" style="color:#5A6A82">hello@trystackflow.com</a>.<br>' +
-      'StackFlow &middot; The AI Visibility Platform &middot; ' +
+      'StraightGrade &middot; The AI Visibility Platform &middot; ' +
       '<a href="https://trystackflow.com/privacy/" style="color:#5A6A82">Privacy Policy</a>' +
     '</td></tr>' +
 
