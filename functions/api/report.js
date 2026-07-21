@@ -4,7 +4,7 @@
  *
  * Requires env RESEND_API_KEY (set in the Cloudflare Pages project:
  * stackflow-landing -> Settings -> Variables and Secrets -> Secret).
- * Sending domain (reports@trystackflow.com) must be verified in Resend.
+ * Sending domain (reports@straightgrade.com) must be verified in Resend.
  *
  * Compliance notes:
  *  - The report email is transactional (explicitly requested by the visitor).
@@ -14,8 +14,8 @@
  */
 import { analyzeDomain, normalizeDomain, json } from "./_engine.js";
 
-const FROM_REPORTS = "StraightGrade Reports <reports@trystackflow.com>";
-const LEAD_INBOX = "hello@trystackflow.com";
+const FROM_REPORTS = "StraightGrade Reports <reports@straightgrade.com>";
+const LEAD_INBOX = "hello@straightgrade.com";
 const BOOKING_URL = "https://calendly.com/getstackflow/ai-visibility-results-review";
 
 export async function onRequestPost(context) {
