@@ -32,3 +32,4 @@ independent and organized by business need, not by commission rate.
 - StackFlow participates in affiliate programs and may earn a commission on some tool links,
   at no additional cost to the buyer. Recommendations are not influenced by commission rates.
 - Outcome examples on the site are illustrative, not guarantees.
+- [The Home-Service Client Engine](https://trystackflow.com/kits/home-services/): 25-prompt AI marketing system for home-service contractors ($29)
