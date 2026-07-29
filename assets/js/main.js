@@ -65,6 +65,11 @@
     ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"].forEach(function (k) {
       var v = p.get(k); if (v) src[k] = v.slice(0, 120);
     });
+    /* Ad-platform click IDs (Google auto-tagging carries gclid, not UTMs) */
+    ["gclid", "gbraid", "wbraid", "msclkid", "fbclid"].forEach(function (k) {
+      if (p.get(k)) src[k] = "present";
+    });
+    if (src.gclid || src.gbraid || src.wbraid) src.channel = "google-ads";
     var ref = document.referrer || "";
     if (ref && ref.indexOf(location.hostname) === -1) src.referrer = ref.slice(0, 200);
     localStorage.setItem("sf_src", JSON.stringify(src));
